@@ -6,7 +6,7 @@ target 'movieDB' do
   use_frameworks!
 
   # Pods for movieDB
-
+  pod 'Alamofire', '~> 4.7'
   target 'movieDBTests' do
     inherit! :search_paths
     # Pods for testing

@@ -1,0 +1,413 @@
+{
+    "results": [
+        {
+            "vote_count": 93,
+            "id": 335983,
+            "video": false,
+            "vote_average": 6.1,
+            "title": "Venom",
+            "popularity": 324.891,
+            "poster_path": "/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+            "original_language": "en",
+            "original_title": "Venom",
+            "genre_ids": [
+                27,
+                878,
+                28,
+                53
+            ],
+            "backdrop_path": "/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg",
+            "adult": false,
+            "overview": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego “Venom” to save his life.",
+            "release_date": "2018-10-03"
+        },
+        {
+            "vote_count": 414,
+            "id": 346910,
+            "video": false,
+            "vote_average": 5.3,
+            "title": "The Predator",
+            "popularity": 104.848,
+            "poster_path": "/wMq9kQXTeQCHUZOG4fAe5cAxyUA.jpg",
+            "original_language": "en",
+            "original_title": "The Predator",
+            "genre_ids": [
+                27,
+                878,
+                28,
+                35
+            ],
+            "backdrop_path": "/f4E0ocYeToEuXvczZv6QArrMDJ.jpg",
+            "adult": false,
+            "overview": "From the outer reaches of space to the small-town streets of suburbia, the hunt comes home. Now, the universe’s most lethal hunters are stronger, smarter and deadlier than ever before, having genetically upgraded themselves with DNA from other species. When a young boy accidentally triggers their return to Earth, only a ragtag crew of ex-soldiers and a disgruntled science teacher can prevent the end of the human race.",
+            "release_date": "2018-09-13"
+        },
+        {
+            "vote_count": 704,
+            "id": 400155,
+            "video": false,
+            "vote_average": 6.9,
+            "title": "Hotel Transylvania 3: Summer Vacation",
+            "popularity": 73.731,
+            "poster_path": "/gjAFM4xhA5vyLxxKMz38ujlUfDL.jpg",
+            "original_language": "en",
+            "original_title": "Hotel Transylvania 3: Summer Vacation",
+            "genre_ids": [
+                10751,
+                14,
+                35,
+                16
+            ],
+            "backdrop_path": "/m03jul0YdVEOFXEQVUv6pOVQYGL.jpg",
+            "adult": false,
+            "overview": "Dracula, Mavis, Johnny and the rest of the Drac Pack take a vacation on a luxury Monster Cruise Ship, where Dracula falls in love with the ship’s captain, Ericka, who’s secretly a descendant of Abraham Van Helsing, the notorious monster slayer.",
+            "release_date": "2018-06-28"
+        },
+        {
+            "vote_count": 467,
+            "id": 400535,
+            "video": false,
+            "vote_average": 6.7,
+            "title": "Sicario: Day of the Soldado",
+            "popularity": 58.846,
+            "poster_path": "/msqWSQkU403cQKjQHnWLnugv7EY.jpg",
+            "original_language": "en",
+            "original_title": "Sicario: Day of the Soldado",
+            "genre_ids": [
+                28,
+                80,
+                18,
+                53
+            ],
+            "backdrop_path": "/tnwMCH4yLBY4qpe6Nr4n66u4U3f.jpg",
+            "adult": false,
+            "overview": "Agent Matt Graver teams up with operative Alejandro Gillick to prevent Mexican drug cartels from smuggling terrorists across the United States border.",
+            "release_date": "2018-06-27"
+        },
+        {
+            "vote_count": 57,
+            "id": 332562,
+            "video": false,
+            "vote_average": 6.7,
+            "title": "A Star Is Born",
+            "popularity": 54.27,
+            "poster_path": "/wrFpXMNBRj2PBiN4Z5kix51XaIZ.jpg",
+            "original_language": "en",
+            "original_title": "A Star Is Born",
+            "genre_ids": [
+                18,
+                10402,
+                10749
+            ],
+            "backdrop_path": "/840rbblaLc4SVxm8gF3DNdJ0YAE.jpg",
+            "adult": false,
+            "overview": "Seasoned musician Jackson Maine discovers—and falls in love with—struggling artist Ally. She has just about given up on her dream to make it big as a singer—until Jack coaxes her into the spotlight. But even as Ally's career takes off, the personal side of their relationship is breaking down, as Jack fights an ongoing battle with his own internal demons.",
+            "release_date": "2018-10-03"
+        },
+        {
+            "vote_count": 3,
+            "id": 446021,
+            "video": false,
+            "vote_average": 3,
+            "title": "Bad Times at the El Royale",
+            "popularity": 40.253,
+            "poster_path": "/iNtFgXqXPRMkm1QO8CHn5sHfUgE.jpg",
+            "original_language": "en",
+            "original_title": "Bad Times at the El Royale",
+            "genre_ids": [
+                53,
+                27,
+                80
+            ],
+            "backdrop_path": "/gb3TVVZNNxVGNfS1NxGaiWZfwnW.jpg",
+            "adult": false,
+            "overview": "Seven strangers, each with a secret to bury, meet at Lake Tahoe's El Royale, a rundown hotel with a dark past in 1969. Over the course of one fateful night, everyone will have a last shot at redemption.",
+            "release_date": "2018-10-04"
+        },
+        {
+            "vote_count": 125,
+            "id": 460885,
+            "video": false,
+            "vote_average": 6.6,
+            "title": "Mandy",
+            "popularity": 38.075,
+            "poster_path": "/m0yf7J7HsKeK6E81SMRcX8vx6mH.jpg",
+            "original_language": "en",
+            "original_title": "Mandy",
+            "genre_ids": [
+                28,
+                53,
+                27
+            ],
+            "backdrop_path": "/mqbAmIiToU2R4VwZGgCqsfy6Yh4.jpg",
+            "adult": false,
+            "overview": "The Shadow Mountains, 1983. Red and Mandy lead a loving and peaceful existence; but when their pine-scented haven is savagely destroyed, Red is catapulted into a phantasmagoric journey filled with bloody vengeance and laced with fire.",
+            "release_date": "2018-09-13"
+        },
+        {
+            "vote_count": 78,
+            "id": 443463,
+            "video": false,
+            "vote_average": 6.9,
+            "title": "Leave No Trace",
+            "popularity": 34.102,
+            "poster_path": "/awGdHLQdPARAWyiT4hzu1ZFdsHO.jpg",
+            "original_language": "en",
+            "original_title": "Leave No Trace",
+            "genre_ids": [
+                18
+            ],
+            "backdrop_path": "/c5GHB444LQShWnO29ulpFMLo4Am.jpg",
+            "adult": false,
+            "overview": "A father and daughter live a perfect but mysterious existence in Forest Park, a beautiful nature reserve near Portland, Oregon, rarely making contact with the world. But when a small mistake tips them off to authorities, they are sent on an increasingly erratic journey in search of a place to call their own.",
+            "release_date": "2018-06-29"
+        },
+        {
+            "vote_count": 51,
+            "id": 463272,
+            "video": false,
+            "vote_average": 6.7,
+            "title": "Johnny English Strikes Again",
+            "popularity": 31.969,
+            "poster_path": "/tCBxnZwLiY1BOKw3tH6AxHZdqPh.jpg",
+            "original_language": "en",
+            "original_title": "Johnny English Strikes Again",
+            "genre_ids": [
+                12,
+                10751,
+                28,
+                35
+            ],
+            "backdrop_path": "/yCOLqh5MOGyYdo58Ap0aWvKop9h.jpg",
+            "adult": false,
+            "overview": "Disaster strikes when a criminal mastermind reveals the identities of all active undercover agents in Britain. The secret service can now rely on only one man—Johnny English. Currently teaching at a minor prep school, Johnny springs back into action to find the mysterious hacker. For this mission to succeed, he’ll need all of his skills—what few he has—as the man with yesterday’s analogue methods faces off against tomorrow’s digital technology.",
+            "release_date": "2018-09-14"
+        },
+        {
+            "vote_count": 27,
+            "id": 446894,
+            "video": false,
+            "vote_average": 7.1,
+            "title": "Smallfoot",
+            "popularity": 29.757,
+            "poster_path": "/4nKoB6wMVXfsYgRZK5lHZ5VMQ6J.jpg",
+            "original_language": "en",
+            "original_title": "Smallfoot",
+            "genre_ids": [
+                35,
+                16,
+                10751,
+                12,
+                14
+            ],
+            "backdrop_path": "/7t88SoT3Dd8DhGnQuVoSbMNUl3W.jpg",
+            "adult": false,
+            "overview": "A bright young yeti finds something he thought didn't exist—a human. News of this “smallfoot” throws the simple yeti community into an uproar over what else might be out there in the big world beyond their snowy village.",
+            "release_date": "2018-09-20"
+        },
+        {
+            "vote_count": 201,
+            "id": 489999,
+            "video": false,
+            "vote_average": 7.7,
+            "title": "Searching",
+            "popularity": 28.01,
+            "poster_path": "/9N0T3BaHZNdUCcMZQIM3yMUFwEh.jpg",
+            "original_language": "en",
+            "original_title": "Searching",
+            "genre_ids": [
+                18,
+                53
+            ],
+            "backdrop_path": "/3CCfgSvtvN3HwVs5hbcC1NhOAzw.jpg",
+            "adult": false,
+            "overview": "After his 16-year-old daughter goes missing, a desperate father breaks into her laptop to look for clues to find her. A thriller that unfolds entirely on computer screens.",
+            "release_date": "2018-08-24"
+        },
+        {
+            "vote_count": 5,
+            "id": 424139,
+            "video": false,
+            "vote_average": 0,
+            "title": "Halloween",
+            "popularity": 24.99,
+            "poster_path": "/lNkDYKmrVem1J0aAfCnQlJOCKnT.jpg",
+            "original_language": "en",
+            "original_title": "Halloween",
+            "genre_ids": [
+                27
+            ],
+            "backdrop_path": "/hO1oTBGNxO5fBKVEuWnSpICJH7c.jpg",
+            "adult": false,
+            "overview": "Jamie Lee Curtis returns to her iconic role as Laurie Strode, who comes to her final confrontation with Michael Myers, the masked figure who has haunted her since she narrowly escaped his killing spree on Halloween night four decades ago. This film, the 11th film in the \"Halloween\" series, will ignore the events of all previous sequels, picking up 40 years after the events of the original film.",
+            "release_date": "2018-10-18"
+        },
+        {
+            "vote_count": 5,
+            "id": 283601,
+            "video": false,
+            "vote_average": 8.5,
+            "title": "Galveston",
+            "popularity": 21.707,
+            "poster_path": "/fZnPtTHw7TfOQoLz3MeAUSLvNK5.jpg",
+            "original_language": "en",
+            "original_title": "Galveston",
+            "genre_ids": [
+                18,
+                53
+            ],
+            "backdrop_path": "/d72Cc53MhCnTqwv0VZ4CFb8nXXX.jpg",
+            "adult": false,
+            "overview": "After a violent encounter with his boss' men, Roy finds a prostitute and sees something in her frightened, defiant eyes that prompts a fateful decision. He takes her with him as he flees to Galveston, an action as ill-advised as it is inescapable.",
+            "release_date": "2018-10-07"
+        },
+        {
+            "vote_count": 764,
+            "id": 395990,
+            "video": false,
+            "vote_average": 5.7,
+            "title": "Death Wish",
+            "popularity": 21.665,
+            "poster_path": "/7FG13lLQcV9DC2Bhn0hjxc6AFXV.jpg",
+            "original_language": "en",
+            "original_title": "Death Wish",
+            "genre_ids": [
+                28,
+                80,
+                18,
+                53
+            ],
+            "backdrop_path": "/uQqQvmptJLPTcWDrZXn22p7j7s3.jpg",
+            "adult": false,
+            "overview": "A mild-mannered father is transformed into a killing machine after his family is torn apart by a violent act.",
+            "release_date": "2018-03-02"
+        },
+        {
+            "vote_count": 83,
+            "id": 463821,
+            "video": false,
+            "vote_average": 6.6,
+            "title": "The House with a Clock in Its Walls",
+            "popularity": 20.988,
+            "poster_path": "/4MA86XWa0aYCwAu30qdvv3EyGBX.jpg",
+            "original_language": "en",
+            "original_title": "The House with a Clock in Its Walls",
+            "genre_ids": [
+                27,
+                14,
+                53,
+                10751,
+                9648
+            ],
+            "backdrop_path": "/tQvvRReWhrXnj28s4AIp2PblByg.jpg",
+            "adult": false,
+            "overview": "Ten-year-old Lewis goes to live with his uncle in a creaky old house that contains a mysterious ticktock noise. When Lewis accidentally awakens the dead, the town's sleepy facade magically springs to life with a secret world of witches and warlocks.",
+            "release_date": "2018-09-15"
+        },
+        {
+            "vote_count": 1,
+            "id": 523873,
+            "video": false,
+            "vote_average": 0,
+            "title": "Kung Fu League",
+            "popularity": 20.888,
+            "poster_path": "/rW0A73hjzPWVwADlCTLnjLhAFLX.jpg",
+            "original_language": "zh",
+            "original_title": "功夫联盟",
+            "genre_ids": [
+                28,
+                35
+            ],
+            "backdrop_path": null,
+            "adult": false,
+            "overview": "Martial arts comedy following a group of kung fu legends banding together to take on the bad guys. The legends includes VINCENT ZHAO reprising his role as ‘Wong Fei Hung’ with DENNIS TO once again portraying ‘Wing Chun’ master ‘Ip Man’, DANNY CHAN KWOK KWAN as ‘Chen Zhen’ and ANDY ON as master ‘Huo Yuan Jia’.",
+            "release_date": "2018-10-19"
+        },
+        {
+            "vote_count": 464,
+            "id": 476926,
+            "video": false,
+            "vote_average": 5.3,
+            "title": "The Titan",
+            "popularity": 20.013,
+            "poster_path": "/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
+            "original_language": "en",
+            "original_title": "The Titan",
+            "genre_ids": [
+                878,
+                53,
+                10749
+            ],
+            "backdrop_path": "/h45LDCoPWmFMTTb7taGhOPBIGKJ.jpg",
+            "adult": false,
+            "overview": "On a bleak future Earth, a soldier endures a radical genetic transformation to save humanity. But his wife fears he's becoming more creature than man.",
+            "release_date": "2018-03-30"
+        },
+        {
+            "vote_count": 17,
+            "id": 369972,
+            "video": false,
+            "vote_average": 0,
+            "title": "First Man",
+            "popularity": 19.534,
+            "poster_path": "/i91mfvFcPPlaegcbOyjGgiWfZzh.jpg",
+            "original_language": "en",
+            "original_title": "First Man",
+            "genre_ids": [
+                36,
+                18
+            ],
+            "backdrop_path": "/zsSClFOZ3a927VB3hVh5ARYhtAh.jpg",
+            "adult": false,
+            "overview": "A look at the life of the astronaut, Neil Armstrong, and the legendary space mission that led him to become the first man to walk on the Moon on July 20, 1969.",
+            "release_date": "2018-10-11"
+        },
+        {
+            "vote_count": 0,
+            "id": 442062,
+            "video": false,
+            "vote_average": 0,
+            "title": "Goosebumps 2: Haunted Halloween",
+            "popularity": 17.882,
+            "poster_path": "/8bcpki9GfXdXj9esFpPtlate8v0.jpg",
+            "original_language": "en",
+            "original_title": "Goosebumps 2: Haunted Halloween",
+            "genre_ids": [
+                12,
+                35,
+                14,
+                27,
+                10751
+            ],
+            "backdrop_path": "/9xYg9ScjGaO2HrLfOfYZirTrB3o.jpg",
+            "adult": false,
+            "overview": "Two boys face an onslaught from witches, monsters, ghouls and a talking dummy after they discover a mysterious book by author R.\u202fL. Stine.",
+            "release_date": "2018-10-12"
+        },
+        {
+            "vote_count": 3,
+            "id": 517814,
+            "video": false,
+            "vote_average": 0,
+            "title": "Capernaum",
+            "popularity": 15.169,
+            "poster_path": "/hiCU2NUuHSZ4tr5o0GhMBBenCsA.jpg",
+            "original_language": "ar",
+            "original_title": "کفرناحوم",
+            "genre_ids": [
+                18
+            ],
+            "backdrop_path": "/8e0ETQmrgcP6R8TaVjd7o9NCGj9.jpg",
+            "adult": false,
+            "overview": "A rebellious youth wishes to sue his parents for having him.",
+            "release_date": "2018-10-06"
+        }
+    ],
+    "page": 1,
+    "total_results": 310,
+    "dates": {
+        "maximum": "2018-10-30",
+        "minimum": "2018-10-11"
+    },
+    "total_pages": 16
+}
