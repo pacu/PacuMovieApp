@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  movieDB
+
+  Created by Francisco Gindre on 5/10/18.
+  Copyright © 2018 Francisco Gindre. All rights reserved.
+*/
+
+"The MovieDB" = "The MovieDB";
+"Popular" = "Popular";
+"Top Rated" = "Top Rated";
+"Upcoming" = "Upcoming";
+"Movies" = "Movies";
+"TV Shows" = "TV Shows";
+
+
+

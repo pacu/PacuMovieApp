@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IzS-2M-dC7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Result Tab View Controller-->
+        <scene sceneID="uTU-b5-zaa">
+            <objects>
+                <viewController storyboardIdentifier="ResultTabViewController" id="IzS-2M-dC7" customClass="ResultTabViewController" customModule="movieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NmX-je-fZF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kmZ-8j-Rgo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8IG-vC-BNN">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="FC1-56-VhI"/>
+                                        </constraints>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXZ-og-HRt">
+                                        <rect key="frame" x="0.0" y="48" width="375" height="599"/>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8IG-vC-BNN" secondAttribute="trailing" id="Am3-Fl-CiX"/>
+                                    <constraint firstAttribute="bottom" secondItem="NXZ-og-HRt" secondAttribute="bottom" id="Dgz-uU-3DP"/>
+                                    <constraint firstAttribute="trailing" secondItem="NXZ-og-HRt" secondAttribute="trailing" id="Dza-bC-VqA"/>
+                                    <constraint firstItem="8IG-vC-BNN" firstAttribute="top" secondItem="kmZ-8j-Rgo" secondAttribute="top" id="Pcg-zu-nch"/>
+                                    <constraint firstItem="NXZ-og-HRt" firstAttribute="leading" secondItem="kmZ-8j-Rgo" secondAttribute="leading" id="bVl-0I-5So"/>
+                                    <constraint firstItem="8IG-vC-BNN" firstAttribute="leading" secondItem="kmZ-8j-Rgo" secondAttribute="leading" id="eBb-Wg-BtN"/>
+                                    <constraint firstItem="NXZ-og-HRt" firstAttribute="top" secondItem="8IG-vC-BNN" secondAttribute="bottom" id="mpA-Cc-fEu"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kmZ-8j-Rgo" firstAttribute="top" secondItem="5JN-7p-grQ" secondAttribute="top" id="2np-0D-90Z"/>
+                            <constraint firstItem="kmZ-8j-Rgo" firstAttribute="leading" secondItem="5JN-7p-grQ" secondAttribute="leading" id="8Jm-Sd-4xM"/>
+                            <constraint firstItem="kmZ-8j-Rgo" firstAttribute="bottom" secondItem="5JN-7p-grQ" secondAttribute="bottom" id="bSu-Id-MFU"/>
+                            <constraint firstItem="kmZ-8j-Rgo" firstAttribute="trailing" secondItem="5JN-7p-grQ" secondAttribute="trailing" id="fJP-FG-Cx3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5JN-7p-grQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="headerContainer" destination="8IG-vC-BNN" id="agp-d8-H2a"/>
+                        <outlet property="resultContainer" destination="NXZ-og-HRt" id="yEj-Vv-SQR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wIC-vs-B7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="-47"/>
+        </scene>
+    </scenes>
+</document>

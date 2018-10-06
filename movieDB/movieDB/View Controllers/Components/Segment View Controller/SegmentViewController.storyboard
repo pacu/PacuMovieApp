@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eoz-Sh-r0L">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Segment View Controller-->
+        <scene sceneID="wbV-6T-hkO">
+            <objects>
+                <viewController storyboardIdentifier="SegmentViewController" id="Eoz-Sh-r0L" customClass="SegmentViewController" customModule="movieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R2U-Uu-D6r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SPX-al-2tc">
+                                <rect key="frame" x="127" y="10" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="valueChanged:" destination="Eoz-Sh-r0L" eventType="valueChanged" id="n35-zD-J8C"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SPX-al-2tc" firstAttribute="centerY" secondItem="R2U-Uu-D6r" secondAttribute="centerY" id="Bzi-V8-Zon"/>
+                            <constraint firstItem="SPX-al-2tc" firstAttribute="centerX" secondItem="R2U-Uu-D6r" secondAttribute="centerX" id="Cec-0P-qIp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zdq-r2-TgE"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="48"/>
+                    <connections>
+                        <outlet property="segmentView" destination="SPX-al-2tc" id="Kpc-TW-oYJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDn-EB-kS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="223"/>
+        </scene>
+    </scenes>
+</document>
