@@ -1,16 +1,30 @@
 PODS:
   - Alamofire (4.7.3)
+  - BouncyLayout (2.1.0)
+  - GaugeKit (0.4.5)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - BouncyLayout
+  - GaugeKit
+  - SDWebImage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - BouncyLayout
+    - GaugeKit
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  BouncyLayout: a7955879861375cc4e88bb64d42bcf622cd2694c
+  GaugeKit: 7872069a8aed2d26b17fca110fe1ab59722f8a33
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 1b8270cbe73c9e976edec4b9c14a38986a550995
+PODFILE CHECKSUM: b6968c0344e14df15598188c342f47dc330437f1
 
 COCOAPODS: 1.5.3

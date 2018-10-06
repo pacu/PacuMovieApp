@@ -28,9 +28,11 @@ class AppEnvironment {
     
     
     public var language: String {
-        get {
-            return NSLocale.current.identifier
-        }
+        return NSLocale.current.identifier
+    }
+    
+    public var locale: Locale {
+        return NSLocale.current
     }
     
     public static let shared =  AppEnvironment()

@@ -7,6 +7,9 @@ target 'movieDB' do
 
   # Pods for movieDB
   pod 'Alamofire', '~> 4.7'
+  pod 'SDWebImage'
+  pod 'BouncyLayout'
+  pod 'GaugeKit'
   target 'movieDBTests' do
     inherit! :search_paths
     # Pods for testing
