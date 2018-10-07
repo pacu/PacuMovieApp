@@ -22,6 +22,7 @@ class AppEnvironment {
     
     private struct Constants {
         static let configFileName = "dontCommitThis"
+        static let imageEndpoint = "https://image.tmdb.org/t/p/"
     }
     
     public private(set) var apikey: String = ""
@@ -29,6 +30,11 @@ class AppEnvironment {
     
     public var language: String {
         return NSLocale.current.identifier
+    }
+    
+    // TODO: obtain real url from https://developers.themoviedb.org/3/configuration/get-api-configuration
+    public var imageEndpoint:String {
+        return Constants.imageEndpoint
     }
     
     public var locale: Locale {

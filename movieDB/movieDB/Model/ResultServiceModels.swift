@@ -34,6 +34,23 @@ import Foundation
  
  */
 public struct ResultItem: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case voteCount
+        case id
+        case video
+        case voteAverage = "vote_average"
+        case title
+        case popularity
+        case posterPath = "poster_path"
+        case originalLanguage = "original_language"
+        case originalTitle = "original_title"
+        case genreIds = "genre_ids"
+        case adult
+        case overview
+        case releaseDate = "release_date"
+        case name
+        case firstAirDate = "first_air_date"
+    }
     var voteCount: Int?
     var id: Int?
     var video: Bool?
@@ -47,10 +64,19 @@ public struct ResultItem: Decodable {
     var adult: Bool?
     var overview: String?
     var releaseDate: String?
+    var name: String?
+    var firstAirDate: String?
     
 }
 
 public struct ResultsResponse: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case totalPages = "total_pages"
+        case totalResults = "total_results"
+        case page
+        case results
+    }
+    
     var totalPages: Int?
     var totalResults: Int?
     var page: Int?

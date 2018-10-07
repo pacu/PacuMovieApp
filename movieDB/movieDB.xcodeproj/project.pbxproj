@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		464C1300216A2FD00065BDFC /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C12FF216A2FD00065BDFC /* ImageUtils.swift */; };
+		464C1303216A4F1A0065BDFC /* UIViewController+containment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1302216A4F1A0065BDFC /* UIViewController+containment.swift */; };
+		464C1306216A55370065BDFC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1305216A55370065BDFC /* DetailViewController.swift */; };
+		464C1308216A55490065BDFC /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464C1307216A55490065BDFC /* DetailViewController.storyboard */; };
+		464C130A216A6CEC0065BDFC /* XibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1309216A6CEC0065BDFC /* XibInstantiable.swift */; };
+		464C130C216A83F00065BDFC /* CALayer+shadowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C130B216A83F00065BDFC /* CALayer+shadowing.swift */; };
+		464C130E216A884F0065BDFC /* venom_detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 464C130D216A884F0065BDFC /* venom_detail.json */; };
+		464C1310216A892E0065BDFC /* tv_shows_popularity_page_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 464C130F216A892E0065BDFC /* tv_shows_popularity_page_1.json */; };
+		464C1312216A894D0065BDFC /* tv_shows_top_rated_page_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 464C1311216A894D0065BDFC /* tv_shows_top_rated_page_1.json */; };
 		466C331221694665006A057A /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C331121694665006A057A /* DateUtils.swift */; };
 		46B837BA2166940F003EC448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B837B92166940F003EC448 /* AppDelegate.swift */; };
 		46B837BC2166940F003EC448 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B837BB2166940F003EC448 /* MoviesViewController.swift */; };
@@ -65,6 +74,15 @@
 		2585D68842A21914CFB82DCC /* Pods_movieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9C9258234B8D51F5DCFC33 /* Pods-movieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-movieDB/Pods-movieDB.release.xcconfig"; sourceTree = "<group>"; };
 		33632AC2C9873D8B6B3BFD85 /* Pods-movieDBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieDBUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movieDBUITests/Pods-movieDBUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		464C12FF216A2FD00065BDFC /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		464C1302216A4F1A0065BDFC /* UIViewController+containment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+containment.swift"; sourceTree = "<group>"; };
+		464C1305216A55370065BDFC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		464C1307216A55490065BDFC /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		464C1309216A6CEC0065BDFC /* XibInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibInstantiable.swift; sourceTree = "<group>"; };
+		464C130B216A83F00065BDFC /* CALayer+shadowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+shadowing.swift"; sourceTree = "<group>"; };
+		464C130D216A884F0065BDFC /* venom_detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venom_detail.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		464C130F216A892E0065BDFC /* tv_shows_popularity_page_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tv_shows_popularity_page_1.json; sourceTree = "<group>"; };
+		464C1311216A894D0065BDFC /* tv_shows_top_rated_page_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tv_shows_top_rated_page_1.json; sourceTree = "<group>"; };
 		466C331121694665006A057A /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		46B837B62166940F003EC448 /* movieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B837B92166940F003EC448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +167,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		464C1301216A4D2C0065BDFC /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		464C1304216A55110065BDFC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				464C1305216A55370065BDFC /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		466C330F216942F7006A057A /* DescriptionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +217,7 @@
 		46B837B82166940F003EC448 /* movieDB */ = {
 			isa = PBXGroup;
 			children = (
+				464C1301216A4D2C0065BDFC /* Navigation */,
 				46B8382921693B20003EC448 /* Views */,
 				46B8381D2167E803003EC448 /* Utils */,
 				46B8380A2167CD3F003EC448 /* View Controllers */,
@@ -242,6 +276,9 @@
 				46B837F12166F3E4003EC448 /* popularity_page_1.json */,
 				46B837F32166F489003EC448 /* top_rated_page_1.json */,
 				46B837FA216704D5003EC448 /* upcoming_page_1.json */,
+				464C130D216A884F0065BDFC /* venom_detail.json */,
+				464C130F216A892E0065BDFC /* tv_shows_popularity_page_1.json */,
+				464C1311216A894D0065BDFC /* tv_shows_top_rated_page_1.json */,
 			);
 			path = mocks;
 			sourceTree = "<group>";
@@ -291,6 +328,9 @@
 		46B8380A2167CD3F003EC448 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				46B8382821691A5F003EC448 /* Base Tabs */,
+				464C1304216A55110065BDFC /* Detail */,
+				46B838212167EE15003EC448 /* ResultViewController */,
 				46B838132167D084003EC448 /* Components */,
 			);
 			path = "View Controllers";
@@ -302,6 +342,7 @@
 				46B837BF2166940F003EC448 /* Main.storyboard */,
 				46B8380E2167CDCA003EC448 /* ResultViewController.storyboard */,
 				46B838242167EEA9003EC448 /* ResultTabViewController.storyboard */,
+				464C1307216A55490065BDFC /* DetailViewController.storyboard */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -309,8 +350,6 @@
 		46B838132167D084003EC448 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				46B8382821691A5F003EC448 /* Base Tabs */,
-				46B838212167EE15003EC448 /* ResultViewController */,
 				46B838202167EE07003EC448 /* Segment View Controller */,
 			);
 			path = Components;
@@ -321,6 +360,10 @@
 			children = (
 				46B8381E2167E81F003EC448 /* UIView+Bounds.swift */,
 				466C331121694665006A057A /* DateUtils.swift */,
+				464C12FF216A2FD00065BDFC /* ImageUtils.swift */,
+				464C1302216A4F1A0065BDFC /* UIViewController+containment.swift */,
+				464C1309216A6CEC0065BDFC /* XibInstantiable.swift */,
+				464C130B216A83F00065BDFC /* CALayer+shadowing.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -501,12 +544,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464C1308216A55490065BDFC /* DetailViewController.storyboard in Resources */,
 				46B838252167EEA9003EC448 /* ResultTabViewController.storyboard in Resources */,
+				464C1312216A894D0065BDFC /* tv_shows_top_rated_page_1.json in Resources */,
 				46B838152167D0C1003EC448 /* SegmentViewController.storyboard in Resources */,
 				46B83837216940A0003EC448 /* ResultItemDescriptionView.xib in Resources */,
 				46B837C621669411003EC448 /* LaunchScreen.storyboard in Resources */,
 				46B837C321669411003EC448 /* Assets.xcassets in Resources */,
+				464C130E216A884F0065BDFC /* venom_detail.json in Resources */,
 				46B8383021693D42003EC448 /* ResultItemCollectionViewCell.xib in Resources */,
+				464C1310216A892E0065BDFC /* tv_shows_popularity_page_1.json in Resources */,
 				46B838092167978C003EC448 /* dontCommitThis.plist in Resources */,
 				46B837F42166F489003EC448 /* top_rated_page_1.json in Resources */,
 				46B838182167E070003EC448 /* Localizable.strings in Resources */,
@@ -613,6 +660,7 @@
 				"${BUILT_PRODUCTS_DIR}/BouncyLayout/BouncyLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/GaugeKit/GaugeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -622,6 +670,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BouncyLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GaugeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -640,15 +689,20 @@
 				46B838122167D075003EC448 /* SegmentViewController.swift in Sources */,
 				46B837BC2166940F003EC448 /* MoviesViewController.swift in Sources */,
 				46B8382F21693D42003EC448 /* ResultItemCollectionViewCell.swift in Sources */,
+				464C130A216A6CEC0065BDFC /* XibInstantiable.swift in Sources */,
 				46B8380021678D18003EC448 /* MovieDBTargetType.swift in Sources */,
 				46B837F92166FFF9003EC448 /* TargetType.swift in Sources */,
 				46B8380721679652003EC448 /* AppEnvironment.swift in Sources */,
 				46B8381F2167E81F003EC448 /* UIView+Bounds.swift in Sources */,
 				466C331221694665006A057A /* DateUtils.swift in Sources */,
+				464C1306216A55370065BDFC /* DetailViewController.swift in Sources */,
 				46B837FE21670502003EC448 /* ResultServiceModels.swift in Sources */,
 				46B8383521694094003EC448 /* ResultItemDescriptionView.swift in Sources */,
+				464C1303216A4F1A0065BDFC /* UIViewController+containment.swift in Sources */,
 				46B83827216919F4003EC448 /* ResultItemDataSource.swift in Sources */,
 				46B838232167EE6F003EC448 /* ResultTabViewController.swift in Sources */,
+				464C130C216A83F00065BDFC /* CALayer+shadowing.swift in Sources */,
+				464C1300216A2FD00065BDFC /* ImageUtils.swift in Sources */,
 				46B8380421678F03003EC448 /* MovieDBService.swift in Sources */,
 				46B8380C2167CD78003EC448 /* ResultViewController.swift in Sources */,
 			);

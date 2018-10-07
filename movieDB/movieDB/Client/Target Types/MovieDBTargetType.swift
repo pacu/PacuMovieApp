@@ -93,7 +93,12 @@ public enum TVTargetType: TargetType {
     
     public var mockFileName: String? {
         get {
-            return nil
+            switch self {
+            case .popular:
+                return "tv_shows_popularity_page_1.json"
+            case .topRated:
+                return "tv_shows_top_rated_page_1.json"
+            }
         }
     }
 }

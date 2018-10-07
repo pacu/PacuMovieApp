@@ -69,21 +69,6 @@ class ResultTabViewController: UIViewController {
 
 }
 
-
-extension UIViewController {
-    static func move(child: UIViewController, to parent: UIViewController, bindingTo parentContainerView: UIView) {
-        child.willMove(toParent: parent)
-        parentContainerView.addSubview(child.view)
-        parent.addChild(child)
-        child.didMove(toParent: parent)
-        child.view.bindFrameToSuperviewBounds()
-    }
-    
-    static func remove(child: UIViewController) {
-        child.view.removeFromSuperview()
-        child.removeFromParent()
-    }
-}
 extension ResultTabViewController: SegmentViewDelegate {
     func segmentSelected(at index: Int, previous: Int) {
         

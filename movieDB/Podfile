@@ -10,6 +10,7 @@ target 'movieDB' do
   pod 'SDWebImage'
   pod 'BouncyLayout'
   pod 'GaugeKit'
+  pod 'SVProgressHUD'
   target 'movieDBTests' do
     inherit! :search_paths
     # Pods for testing

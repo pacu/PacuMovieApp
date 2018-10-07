@@ -5,44 +5,49 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ResultItemCollectionViewCell" customModule="movieDB" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ResultItemCollectionViewCell" id="gTV-IL-0wX" customClass="ResultItemCollectionViewCell" customModule="movieDB" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="350" height="260"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="350" height="260"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QnL-Ok-46o">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="262"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g0V-AL-cik">
-                                <rect key="frame" x="0.0" y="0.0" width="350" height="212"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="212" id="BsT-KX-jww"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qK3-2S-Ybb">
-                                <rect key="frame" x="0.0" y="212" width="350" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g0V-AL-cik">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="210"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="210" id="CwV-Nb-noF"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="210" id="DLJ-Ne-tjW"/>
+                            <constraint firstAttribute="width" constant="350" id="q8q-Ud-Pde"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qK3-2S-Ybb">
+                        <rect key="frame" x="0.0" y="210" width="350" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="rKb-aO-O1o"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="QnL-Ok-46o" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AMY-vD-g2q"/>
-                <constraint firstAttribute="trailing" secondItem="QnL-Ok-46o" secondAttribute="trailing" id="Nja-ll-IGc"/>
-                <constraint firstAttribute="bottom" secondItem="QnL-Ok-46o" secondAttribute="bottom" constant="-2" id="cBw-UU-Ejx"/>
-                <constraint firstItem="QnL-Ok-46o" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="la7-8C-ixa"/>
+                <constraint firstItem="qK3-2S-Ybb" firstAttribute="top" secondItem="g0V-AL-cik" secondAttribute="bottom" id="AHc-5S-yDv"/>
+                <constraint firstAttribute="trailing" secondItem="g0V-AL-cik" secondAttribute="trailing" id="L2R-OI-p7k"/>
+                <constraint firstAttribute="trailing" secondItem="qK3-2S-Ybb" secondAttribute="trailing" id="bQx-CM-Gpc"/>
+                <constraint firstItem="g0V-AL-cik" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dLg-Yt-jkM"/>
+                <constraint firstItem="qK3-2S-Ybb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mGq-ML-Htf"/>
+                <constraint firstItem="g0V-AL-cik" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wII-1l-eoa"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="350" height="252"/>
+            <connections>
+                <outlet property="descriptionContainer" destination="qK3-2S-Ybb" id="fKI-aa-bZo"/>
+                <outlet property="descriptionHeight" destination="rKb-aO-O1o" id="sfF-rS-F0O"/>
+                <outlet property="imageView" destination="g0V-AL-cik" id="mlp-WX-ORY"/>
+            </connections>
             <point key="canvasLocation" x="297.60000000000002" y="117.84107946026987"/>
         </collectionViewCell>
     </objects>

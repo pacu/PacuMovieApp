@@ -8,6 +8,13 @@
 
 import Foundation
 
+extension DateFormatter {
+    static func moviedb_formatter() -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-mm-dd"
+        return dateFormatter
+    }
+}
 
 extension Date  {
     

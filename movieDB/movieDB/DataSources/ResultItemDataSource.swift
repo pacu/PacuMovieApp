@@ -19,6 +19,7 @@ public protocol ResultDataSourceDelegate {
 public protocol ResultDataSource {
     var targetType: TargetType { get set }
     var delegate: ResultDataSourceDelegate { get set }
+    func item(at indexPath: IndexPath) -> ResultItem?
     func load()
 }
 
@@ -27,7 +28,6 @@ public protocol PagedDataSource {
 }
 
 public typealias PagedResultCollectionViewDataSource = NSObject & ResultDataSource & PagedDataSource & UICollectionViewDataSource
-
 
 public class MovieDbCollectionViewDataSource: PagedResultCollectionViewDataSource {
     
@@ -43,9 +43,14 @@ public class MovieDbCollectionViewDataSource: PagedResultCollectionViewDataSourc
     private var paging = PagingData(totalPages: 0,totalResults: 0,page: 0)
     private var results: [ResultItem]?
     
+    init(targetType: TargetType, delegate: ResultDataSourceDelegate) {
+        self.targetType = targetType
+        self.delegate = delegate
+    }
     
     
     public func load() {
+        self.delegate.willBeginLoading(self)
         load(page: paging.page ?? 0)
     }
     
@@ -53,7 +58,11 @@ public class MovieDbCollectionViewDataSource: PagedResultCollectionViewDataSourc
         
         if var _results = self.results {
             _results.append(contentsOf: results)
+            return
         }
+        
+        self.results = [ResultItem](results)
+        
     }
     
     private func noResults(resultResponse: ResultsResponse) -> Bool {
@@ -89,25 +98,44 @@ public class MovieDbCollectionViewDataSource: PagedResultCollectionViewDataSourc
             }
             
             self.paging = PagingData(totalPages: resultResponse.totalPages, totalResults: resultResponse.page, page: resultResponse.totalPages)
-            
             self.append(results: results)
-            
             self.delegate.didFinishLoading(self)
             
         }
     }
     
-    
-    
     public func loadNextPage() {
         guard let currentPage = paging.page, let totalPages = paging.totalPages,
             (0 ..< totalPages).contains(currentPage + 1) else { return }
-        
     }
     
-    init(targetType: TargetType, delegate: ResultDataSourceDelegate) {
-        self.targetType = targetType
-        self.delegate = delegate
+    public func item(at indexPath: IndexPath) -> ResultItem? {
+        guard let results = results,
+            (0 ..< results.count).contains(indexPath.row) else {
+                print("no results")
+                assert(false)
+                return nil}
+        
+        return results[indexPath.row]
+    }
+    
+    // Mark: CollectionView Delegate
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let item = results?[indexPath.row] else {
+            print("no results but the datasource is trying to paint rows")
+            assert(false)
+            return UICollectionViewCell()
+        }
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResultItemCollectionViewCell._reuseIdentifier, for: indexPath) as? ResultItemCollectionViewCell else {
+            print("Could not dequeue ResultItemCollectionViewCell")
+            assert(false)
+            return UICollectionViewCell()
+        }
+        
+        cell.setUp(model: item)
+        return cell
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -116,10 +144,6 @@ public class MovieDbCollectionViewDataSource: PagedResultCollectionViewDataSourc
     
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
     }
 }
 
