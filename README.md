@@ -252,3 +252,21 @@ I try to keep the usage of third party libraries to the bare minimum. A good che
 - [x] learn to master it won't take as long as implementing your own
 
 
+# Why didn't you use one of those MovieDB cocoa pods?
+well, it did not meet the checklist's criteria, plus, anyone can build an App around pods. It's not the goal of this demo App to proof myself I can be a newbie iOS developer all over again.
+
+# Some basic ground rules to build ~great~ decent software
+
+## Single Responsibility Principle
+[Wikipedia](https://en.wikipedia.org/wiki/Single_responsibility_principle)
+Avoid "god objects" at all costs. Balance every class to 'mind its own business' and to 'to work with others'. Compose functionality with small, well delimited classes that perform different aspects that build that functionality. It does not matter whether you want to achieve it Top-Down or Bottom-Up.
+
+## Clean Code
+
+*- Clean code is simple and direct. Clean code reads like well-written prose. Clean code never obscures the designer’s intent but rather is full of crisp abstractions and straightforward lines of control*, **Grady Booch**, author of Object Oriented Analysis and Design with Applications 
+
+**Kent Beck’s rules of simple code. In priority order, simple code:**
+* Runs all the tests;
+* Contains no duplication;
+* Expresses all the design ideas that are in the system;
+* Minimizes the number of entities such as classes, methods, functions, and the like.
