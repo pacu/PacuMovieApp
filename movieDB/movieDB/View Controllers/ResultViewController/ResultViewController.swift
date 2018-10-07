@@ -13,6 +13,18 @@ protocol ResultViewControllerDelegate {
     func resultViewController(_ :ResultViewController, itemSelected: ResultItem)
 }
 
+extension ResultViewControllerDelegate where Self:UIViewController {
+    func resultViewController(_: ResultViewController, itemSelected: ResultItem) {
+        guard let detail = DetailViewController.create(item: itemSelected) else {
+            print("error creando detalle")
+            assert(false)
+            return
+        }
+        detail.title = itemSelected.genericName
+        self.present(UINavigationController.init(rootViewController: detail), animated: true, completion: nil)
+    }
+}
+
 class ResultViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!

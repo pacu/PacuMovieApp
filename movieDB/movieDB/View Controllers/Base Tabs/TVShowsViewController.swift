@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TVShowsViewController: UIViewController {
+class TVShowsViewController: UIViewController, ResultViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,17 +38,4 @@ class TVShowsViewController: UIViewController {
         
         UIViewController.move(child: controller, to: self, bindingTo: self.view)
     }
-}
-
-extension TVShowsViewController: ResultViewControllerDelegate {
-    func resultViewController(_: ResultViewController, itemSelected: ResultItem) {
-        guard let detail = DetailViewController.create(item: itemSelected) else {
-            print("error creando detalle")
-            assert(false)
-            return
-        }
-        self.present(detail, animated: true, completion: nil)
-    }
-    
-    
 }

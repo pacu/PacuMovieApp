@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController {
+class MoviesViewController: UIViewController, ResultViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,20 +43,4 @@ class MoviesViewController: UIViewController {
         
         UIViewController.move(child: controller, to: self, bindingTo: self.view)
     }
-
-
 }
-
-extension MoviesViewController: ResultViewControllerDelegate {
-    func resultViewController(_: ResultViewController, itemSelected: ResultItem) {
-        guard let detail = DetailViewController.create(item: itemSelected) else {
-            print("error creando detalle")
-            assert(false)
-            return
-        }
-        self.present(detail, animated: true, completion: nil)
-    }
-    
-    
-}
-

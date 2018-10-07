@@ -67,6 +67,10 @@ public struct ResultItem: Decodable {
     var name: String?
     var firstAirDate: String?
     
+    var genericName: String? {
+        if name != nil { return name }
+        return title
+    }
 }
 
 public struct ResultsResponse: Decodable {

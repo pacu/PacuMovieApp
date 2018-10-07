@@ -38,10 +38,13 @@ class DetailViewController: UIViewController {
     public func setup() {
         
         guard let item = self.model else { return }
-        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(done))
         label.text = item.originalTitle
     }
     
+    @objc public func done () {
+        self.dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
