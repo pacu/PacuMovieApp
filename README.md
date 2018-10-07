@@ -1,5 +1,8 @@
 # Yet Another Demo MovieDB client App
 
+![YADMDBCA](/readme/v1-iPhone6.png)
+
+
 In order to meet evaluators' criteria the App must:
 * Use [MovieDB APIv3](https://developers.themoviedb.org/3) for Movies and Tv Shows 
 * must have show 3 categories from movies or TV Shows (popular, top rated, upcoming)
@@ -16,8 +19,13 @@ In order to meet evaluators' criteria the App must:
 
 # v1 
 checkout tag "v1" to see this stage
-
 V1 of the app uses Mocked APIs to build a basic results page
+
+## What's on V1
+
+- [x] Use [MovieDB APIv3](https://developers.themoviedb.org/3) for Movies and Tv Shows 
+- [x] must have show 3 categories from movies or TV Shows (popular, top rated, upcoming)
+
 
 ## Project Structure
 ![project structure](/readme/v1-structure.png)
@@ -232,4 +240,15 @@ public static func create(targetType: TargetType) -> ResultViewController? {
         return resultController
     }
 ```
+
+# Cocoa Pods 
+I try to keep the usage of third party libraries to the bare minimum. A good checklist to decide whether to use a pod or create your own
+- [x] last commit is recent
+- [x] project is well documented and supports last language version 
+- [x] has been starred and/or forked by many people
+- [x] it's usage is not intrusive
+- [x] it's not overkill (importing heavy library for a small feature in return)
+- [x] does not have tons of dependencies
+- [x] learn to master it won't take as long as implementing your own
+
 
