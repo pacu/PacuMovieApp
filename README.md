@@ -17,6 +17,22 @@ In order to meet evaluators' criteria the App must:
 3. Online Search 
 4. Unit Tests
 
+## Important Notice
+I did not commit my apikey, so you have to put your own plist on the project 
+![how](/readme/plist-location.png)
+
+your file should look like this
+![plistmagic](/readme/plist-sample.png)
+
+you either respect the "naming convention" or modify the source code of the AppEnvironment helper
+```swift
+class AppEnvironment {
+    
+    
+    private struct Constants {
+        static let configFileName = "dontCommitThis"
+```
+
 # v1 
 checkout tag "v1" to see this stage
 V1 of the app uses Mocked APIs to build a basic results page
