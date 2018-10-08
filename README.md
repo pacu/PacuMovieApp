@@ -41,6 +41,21 @@ V1 of the app uses Mocked APIs to build a basic results page
 
 - [x] Use [MovieDB APIv3](https://developers.themoviedb.org/3) for Movies and Tv Shows 
 - [x] must have show 3 categories from movies or TV Shows (popular, top rated, upcoming)
+- [x] offline support for images (cache)
+
+## What's on V1.0.1
+![detail view](/readme/Detail-iPhone6.png)
+- [x] Use [MovieDB APIv3](https://developers.themoviedb.org/3) for Movies and Tv Shows 
+- [x] must have show 3 categories from movies or TV Shows (popular, top rated, upcoming)
+- [x] offline support for images (cache)
+- [x] must show a Movie or show detail's
+ 
+## What's pending?
+- [ ] Connect to real services using Alamofire 
+- [ ] offline support for models
+- [ ] offline categorized search 
+- [ ] online search
+- [ ] UITests
 
 
 ## Project Structure
@@ -73,8 +88,22 @@ V1 of the app uses Mocked APIs to build a basic results page
   * DataSources:
     The good old reusable data sources for our table or collection views. 
 
+# View Architecture: Lightweight MVC with UIViewController containment
+Complaining about MVC is a mistake. A long time ago in a galaxy far far away Apple Biased iOS Developers with clunky sample code which everyone took way too seriously. Old Apple Docs had Massive View Controllers Everywhere. Code Quality was in decay and Apple reacted soon but maybe not enough. Bad implementations of MVC where everywhere and the pattern was going to be the one to blame. Shame on us Developers! 
 
-# API Client arquitecture
+
+Some patterns gained momentum quickly, specially MVVM and VIPER. Personally I had setbacks with MVVM because the lack of widespread adoption of Reactive Cocoa/Swift. Many Developers adopted MVVM without Reactive because the latter can be a debugging madness, but there's no much to gain without it. ViewModes turn into massive mediator objects and code Reusability  affected. VIPER is a nice pattern to adopt on Apps with complex navigation paths, although if that's your situation, you should tune it up a little more before jumping to the VIPER ship.
+
+I like to achive lightweight MVC with ViewController containment. The containment code is pretty reusable by adopting protocols and mixins. Plus it helps enforcing two positive aspects: Protocol Oriented Programming and Atomic Design. This means: Think of your screens as a collection of components with simple and unique responsibilities. DetailViewController is a quick implementation of it. 
+
+## Cutting the Storyboard sugar
+Storyboards are great, but they turn into clunky beach ball generators as soon as you reach a few complex view controllers. Furthermore it's impossible to collaborate on them. Storyboard references are an improvement, but linking XML files within XML files, is error prone. It only takes one typo to get a cryptic runtime error and start loosing time and your mind on it.
+That's why I use separate storyboards and nib files for my view controllers and views.
+
+## when to use xib and storyboard
+nib files practical for small views tha do not involve controller containment and just display simple stuff. Storyboards for all the rest of the use cases. 
+
+# API Client Architecture
 The idea behind this API is to make it as Simple and Swifty as possible. KISaSS (Keep It Simple and Swifty Stupid, wait...that did not come out as expected)
 
 We have two basic components: Services and TargetTypes. 
