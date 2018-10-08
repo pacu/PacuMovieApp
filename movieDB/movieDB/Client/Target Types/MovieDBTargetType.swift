@@ -16,13 +16,22 @@ extension TargetType {
     }
 }
 
-public enum MovieTargetType: TargetType {
-    
-    
+public typealias DetailTargetType = TargetType & Detailable
+
+public protocol Detailable {
+    func detailify(id: Int) -> DetailTargetType
+}
+
+public enum MovieTargetType: TargetType, Detailable {
     
     case popular
     case topRated
     case upcoming
+    case detail(id: Int)
+    
+    public func detailify(id: Int) -> DetailTargetType {
+        return MovieTargetType.detail(id: id)
+    }
     
     public var path: String {
         get {
@@ -33,6 +42,8 @@ public enum MovieTargetType: TargetType {
                 return "/movie/top_rated"
             case .upcoming:
                 return "/movie/upcoming"
+            case .detail(let id):
+                return "/movie/\(id)"
             }
         }
     }
@@ -57,16 +68,19 @@ public enum MovieTargetType: TargetType {
                 return "top_rated_page_1.json"
             case .upcoming:
                 return "upcoming_page_1.json"
+            case .detail( _):
+                return "venom_detail.json"
             }
         }
     }
     
 }
 
-public enum TVTargetType: TargetType {
+public enum TVTargetType: TargetType, Detailable {
     
     case popular
     case topRated
+    case detail(id: Int)
     
     public var path: String {
         get {
@@ -75,11 +89,14 @@ public enum TVTargetType: TargetType {
                 return "/tv/popular"
             case .topRated:
                 return "/tv/top_rated"
-            
+            case .detail(let id):
+                return "/tv/\(id)"
             }
         }
     }
-    
+    public func detailify(id: Int) -> DetailTargetType{
+        return TVTargetType.detail(id: id)
+    }
     public var method: String {
         get {
             return "GET"
@@ -98,6 +115,8 @@ public enum TVTargetType: TargetType {
                 return "tv_shows_popularity_page_1.json"
             case .topRated:
                 return "tv_shows_top_rated_page_1.json"
+            case .detail( _):
+                return "venom_detail.json"
             }
         }
     }

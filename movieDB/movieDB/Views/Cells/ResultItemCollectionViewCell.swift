@@ -31,6 +31,7 @@ class ResultItemCollectionViewCell: UICollectionViewCell {
             assert(false)
             return
         }
+        
         self.descriptionView = descriptionView
         descriptionContainer.addSubview(descriptionView)
         descriptionView.bindFrameToSuperviewBounds()

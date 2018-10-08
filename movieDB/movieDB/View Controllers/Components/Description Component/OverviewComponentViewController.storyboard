@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4hf-l0-c4k">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Overview Component View Controller-->
+        <scene sceneID="Wrs-au-cOn">
+            <objects>
+                <viewController id="4hf-l0-c4k" customClass="OverviewComponentViewController" customModule="movieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wtw-5g-X2Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="310"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxR-GB-iBN">
+                                <rect key="frame" x="20" y="30" width="335" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPW-vd-ZTn">
+                                <rect key="frame" x="20" y="63.5" width="335" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25882352941176473" green="0.28627450980392155" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vPW-vd-ZTn" firstAttribute="top" secondItem="qxR-GB-iBN" secondAttribute="bottom" constant="8" id="7bN-8B-VB2"/>
+                            <constraint firstItem="qxR-GB-iBN" firstAttribute="leading" secondItem="vGa-sa-R8y" secondAttribute="leading" constant="20" id="7kz-wp-Tpt"/>
+                            <constraint firstItem="vGa-sa-R8y" firstAttribute="trailing" secondItem="qxR-GB-iBN" secondAttribute="trailing" constant="20" id="C6l-K4-c6y"/>
+                            <constraint firstItem="vGa-sa-R8y" firstAttribute="trailing" secondItem="vPW-vd-ZTn" secondAttribute="trailing" constant="20" id="PFe-jy-ary"/>
+                            <constraint firstItem="vGa-sa-R8y" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vPW-vd-ZTn" secondAttribute="bottom" priority="750" constant="20" id="Rb8-qO-5hW"/>
+                            <constraint firstItem="qxR-GB-iBN" firstAttribute="top" secondItem="vGa-sa-R8y" secondAttribute="top" constant="30" id="TI6-Bt-Igg"/>
+                            <constraint firstItem="vPW-vd-ZTn" firstAttribute="leading" secondItem="vGa-sa-R8y" secondAttribute="leading" constant="20" id="nDh-bN-wKW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vGa-sa-R8y"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="310"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="vPW-vd-ZTn" id="rlB-vb-QHo"/>
+                        <outlet property="overviewLabel" destination="qxR-GB-iBN" id="Fkv-He-Kbd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbn-uk-vmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

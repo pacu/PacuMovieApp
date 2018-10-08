@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eLZ-sg-qm8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Score Component-->
+        <scene sceneID="LtM-4G-UGh">
+            <objects>
+                <viewController id="eLZ-sg-qm8" customClass="DetailScoreComponent" customModule="movieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tj1-jc-ctB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yge-kj-ueR" customClass="ScoreView" customModule="movieDB" customModuleProvider="target">
+                                <rect key="frame" x="20" y="17.5" width="55" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="4c7-0q-CZ8"/>
+                                    <constraint firstAttribute="width" constant="55" id="l1O-BO-aaK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snB-d3-sf2">
+                                <rect key="frame" x="95" y="45" width="260" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.10196078431372549" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yge-kj-ueR" firstAttribute="leading" secondItem="jO0-qb-OU0" secondAttribute="leading" constant="20" id="H6j-FX-MNW"/>
+                            <constraint firstItem="snB-d3-sf2" firstAttribute="leading" secondItem="yge-kj-ueR" secondAttribute="trailing" constant="20" id="J7L-sZ-dmq"/>
+                            <constraint firstItem="yge-kj-ueR" firstAttribute="centerY" secondItem="tj1-jc-ctB" secondAttribute="centerY" id="fUn-MM-DOT"/>
+                            <constraint firstItem="snB-d3-sf2" firstAttribute="centerY" secondItem="tj1-jc-ctB" secondAttribute="centerY" id="uTS-NV-PHB"/>
+                            <constraint firstItem="jO0-qb-OU0" firstAttribute="trailing" secondItem="snB-d3-sf2" secondAttribute="trailing" constant="20" id="ueH-Qp-M62"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jO0-qb-OU0"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="90"/>
+                    <connections>
+                        <outlet property="scoreContainer" destination="yge-kj-ueR" id="xyi-gV-po6"/>
+                        <outlet property="userScoreLabel" destination="snB-d3-sf2" id="c0e-0C-zcc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7R-zY-LbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="27.886056971514247"/>
+        </scene>
+    </scenes>
+</document>

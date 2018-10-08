@@ -14,8 +14,10 @@ protocol ResultViewControllerDelegate {
 }
 
 extension ResultViewControllerDelegate where Self:UIViewController {
-    func resultViewController(_: ResultViewController, itemSelected: ResultItem) {
-        guard let detail = DetailViewController.create(item: itemSelected) else {
+    func resultViewController(_ controller: ResultViewController, itemSelected: ResultItem) {
+        guard let detailId = itemSelected.id,
+              let targetType = controller.targetType as? Detailable,
+              let detail = DetailViewController.create(item: detailId, targetType: targetType.detailify(id: detailId)) else {
             print("error creando detalle")
             assert(false)
             return
@@ -37,7 +39,11 @@ class ResultViewController: UIViewController {
     }
     
     var delegate: ResultViewControllerDelegate?
-
+    
+    var targetType: TargetType? {
+        return collectionViewDataSource?.targetType
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let bundle = Bundle(for: ResultItemCollectionViewCell.self)
@@ -62,16 +68,6 @@ class ResultViewController: UIViewController {
         guard let vc = storyboard.instantiateInitialViewController() as? ResultViewController else { return nil }
         return vc
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

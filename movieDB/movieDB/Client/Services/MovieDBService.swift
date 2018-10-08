@@ -14,17 +14,17 @@ public enum ResponseError: Error {
 }
 
 public typealias ResultBlock =  (_ result: ResultsResponse?, _ error: Error?) -> Void
+public typealias DetailBlock =  (_ detail: ItemDetail?, _ error: Error?) -> Void
 
 public protocol MovieDBResultService: class {
     static func fetchResult(apiTarget: TargetType, page: Int?, resultBlock: @escaping ResultBlock) -> Void
+    static func fetchDetail(id: Int?, apiTarget: TargetType, resultBlock: @escaping DetailBlock) -> Void
 }
 
 // TODO: Mockear esta bella API
 public class MovieDBResultAPIMock: MovieDBResultService {
     private struct Constants {
-        static let popularFile = "popularity_page_1.json"
-        static let topRated = "top_rated_page_1.json"
-        static let upcoming = "upcoming_page_1.json"
+
         static let waitTime = 3.0
     }
     
@@ -66,5 +66,47 @@ public class MovieDBResultAPIMock: MovieDBResultService {
         return response
         
     }
-
+    
+    
+    public static func fetchDetail(id: Int?, apiTarget: TargetType, resultBlock: @escaping DetailBlock) -> Void {
+        guard let name = apiTarget.mockFileName  else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.waitTime) {
+                resultBlock(nil, ResponseError.invalidResponse)
+            }
+            return
+        }
+        
+        DispatchQueue.global().async {
+            guard let response = self.detailFromFile(name: name) else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + Constants.waitTime) {
+                    resultBlock(nil,ResponseError.invalidResponse)
+                }
+                return
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.waitTime) {
+                resultBlock(response,nil)
+            }
+        }
+    }
+    
+    private static func detailFromFile(name: String) -> ItemDetail? {
+        guard let path = Bundle.main.path(forResource: name, ofType: nil) else {
+            return nil
+        }
+        let url = URL(fileURLWithPath:  path)
+        guard let data = try? Data(contentsOf: url) else {
+            
+            return nil
+        }
+        do {
+            return try JSONDecoder().decode(ItemDetail.self , from: data)
+        } catch let error  {
+            print(error)
+            assert(false)
+        }
+        return nil
+        
+    }
+        
 }

@@ -17,24 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fh6-Uk-M3a">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRv-3o-6a3" userLabel="header">
+                                <rect key="frame" x="0.0" y="20" width="375" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="9aM-S7-VZA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdM-fR-8xV" userLabel="score">
+                                <rect key="frame" x="0.0" y="280" width="375" height="90"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Rc7-Qu-E7r"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4no-re-oYA" userLabel="description">
+                                <rect key="frame" x="0.0" y="370" width="375" height="297"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tim-oJ-8DE" firstAttribute="bottom" secondItem="fh6-Uk-M3a" secondAttribute="bottom" id="2Xa-mf-D3c"/>
-                            <constraint firstItem="fh6-Uk-M3a" firstAttribute="top" secondItem="tim-oJ-8DE" secondAttribute="top" id="837-tt-6kg"/>
-                            <constraint firstItem="fh6-Uk-M3a" firstAttribute="leading" secondItem="tim-oJ-8DE" secondAttribute="leading" id="8td-ff-itP"/>
-                            <constraint firstItem="tim-oJ-8DE" firstAttribute="trailing" secondItem="fh6-Uk-M3a" secondAttribute="trailing" id="v8b-ec-eh1"/>
+                            <constraint firstItem="IRv-3o-6a3" firstAttribute="leading" secondItem="tim-oJ-8DE" secondAttribute="leading" id="AsO-Aw-6jd"/>
+                            <constraint firstItem="OdM-fR-8xV" firstAttribute="top" secondItem="IRv-3o-6a3" secondAttribute="bottom" id="akX-wu-JDs"/>
+                            <constraint firstItem="4no-re-oYA" firstAttribute="top" secondItem="OdM-fR-8xV" secondAttribute="bottom" id="eW4-mR-h0B"/>
+                            <constraint firstItem="OdM-fR-8xV" firstAttribute="leading" secondItem="tim-oJ-8DE" secondAttribute="leading" id="gLJ-G0-Qe5"/>
+                            <constraint firstItem="OdM-fR-8xV" firstAttribute="trailing" secondItem="tim-oJ-8DE" secondAttribute="trailing" id="hNZ-vr-9w2"/>
+                            <constraint firstItem="tim-oJ-8DE" firstAttribute="trailing" secondItem="IRv-3o-6a3" secondAttribute="trailing" id="oMq-dr-FTf"/>
+                            <constraint firstItem="tim-oJ-8DE" firstAttribute="bottom" secondItem="4no-re-oYA" secondAttribute="bottom" id="rAs-0J-8r1"/>
+                            <constraint firstItem="tim-oJ-8DE" firstAttribute="trailing" secondItem="4no-re-oYA" secondAttribute="trailing" id="shU-kd-s4p"/>
+                            <constraint firstItem="4no-re-oYA" firstAttribute="leading" secondItem="tim-oJ-8DE" secondAttribute="leading" id="uqO-1U-Jjx"/>
+                            <constraint firstItem="IRv-3o-6a3" firstAttribute="top" secondItem="tim-oJ-8DE" secondAttribute="top" id="vgl-f2-vXg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tim-oJ-8DE"/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="fh6-Uk-M3a" id="OFY-gy-5ax"/>
+                        <outlet property="headerContainerView" destination="IRv-3o-6a3" id="UH2-ga-YNb"/>
+                        <outlet property="overviewContainerView" destination="4no-re-oYA" id="sgV-KB-9ru"/>
+                        <outlet property="scoreContainerView" destination="OdM-fR-8xV" id="eeg-sf-fMs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfS-lo-pJD" userLabel="First Responder" sceneMemberID="firstResponder"/>

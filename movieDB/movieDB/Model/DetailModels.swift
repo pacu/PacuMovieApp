@@ -43,8 +43,8 @@ public enum ItemStatus: String, Decodable {
     case planned = "Planned"
     case inProduction = "In Production"
     case postProduction = "Post Production"
-    case released = "released"
-    case cancelled = "cancelled"
+    case released = "Released"
+    case cancelled = "Cancelled"
 }
 
 public struct CreditItem: Decodable {
@@ -89,6 +89,19 @@ public struct ItemDetail: Decodable {
         case releaseDate = "release_date"
         case name
         case firstAirDate = "first_air_date"
+        
+        // TV Specific
+        case createdBy = "created_by"
+        case numberOfEpisodes = "number_of_episodes"
+        case numberOfSeasons = "number_of_seasons"
+        case episodeRunTime = "episode_run_time"        
+        case inProduction = "in_production"
+        case languages
+        case lastEpisodeAired = "last_episode_to_air"
+        case networks
+        case originalName = "original_name"
+        case seasons
+        case type
     }
     var adult: Bool?
     var voteCount: Int?
@@ -103,8 +116,8 @@ public struct ItemDetail: Decodable {
     var overview: String?
     var popularity: Float?
     var posterPath: String?
-    var productionCompanies: Companies?
-    var productionCountries: ProductionCountries?
+    var productionCompanies: [Companies]?
+    var productionCountries: [ProductionCountries]?
     var status: ItemStatus?
     var tagline: String?
     var title: String?
@@ -130,6 +143,15 @@ public struct ItemDetail: Decodable {
 
     
     
+    var year: String? {
+        let dateString = self.releaseDate ?? self.firstAirDate ?? nil
+        
+        guard let string = dateString, let date = DateFormatter.moviedb_formatter().date(from: string) else {
+            return nil
+        }
+        
+        return String(describing: date.year())
+    }
     var genericName: String? {
         if name != nil { return name }
         return title

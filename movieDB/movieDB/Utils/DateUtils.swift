@@ -39,5 +39,12 @@ extension Date  {
         return formatter.string(from: date)
         
     }
+    
+    func year() -> Int {
+        
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        return calendar.component(Calendar.Component.year, from: self)
+        
+    }
 }
 
