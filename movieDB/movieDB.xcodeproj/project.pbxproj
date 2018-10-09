@@ -27,6 +27,10 @@
 		464C1329216AEF110065BDFC /* OverviewComponentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464C1328216AEF110065BDFC /* OverviewComponentViewController.storyboard */; };
 		464C132D216B07060065BDFC /* OverviewComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C132C216B07060065BDFC /* OverviewComponentViewController.swift */; };
 		464C132F216B0A740065BDFC /* twd_detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 464C132E216B0A740065BDFC /* twd_detail.json */; };
+		464C1333216C2A7F0065BDFC /* TargetType + Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1332216C2A7F0065BDFC /* TargetType + Alamofire.swift */; };
+		464C1335216C2EA90065BDFC /* TVTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1334216C2EA90065BDFC /* TVTargetType.swift */; };
+		464C1337216C2ED40065BDFC /* MovieTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1336216C2ED40065BDFC /* MovieTargetType.swift */; };
+		464C1339216C2F0B0065BDFC /* MovieDBServiceMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1338216C2F0B0065BDFC /* MovieDBServiceMocks.swift */; };
 		466C331221694665006A057A /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C331121694665006A057A /* DateUtils.swift */; };
 		46B837BA2166940F003EC448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B837B92166940F003EC448 /* AppDelegate.swift */; };
 		46B837BC2166940F003EC448 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B837BB2166940F003EC448 /* MoviesViewController.swift */; };
@@ -105,6 +109,10 @@
 		464C1328216AEF110065BDFC /* OverviewComponentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OverviewComponentViewController.storyboard; sourceTree = "<group>"; };
 		464C132C216B07060065BDFC /* OverviewComponentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewComponentViewController.swift; sourceTree = "<group>"; };
 		464C132E216B0A740065BDFC /* twd_detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = twd_detail.json; sourceTree = "<group>"; };
+		464C1332216C2A7F0065BDFC /* TargetType + Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TargetType + Alamofire.swift"; sourceTree = "<group>"; };
+		464C1334216C2EA90065BDFC /* TVTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVTargetType.swift; sourceTree = "<group>"; };
+		464C1336216C2ED40065BDFC /* MovieTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTargetType.swift; sourceTree = "<group>"; };
+		464C1338216C2F0B0065BDFC /* MovieDBServiceMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBServiceMocks.swift; sourceTree = "<group>"; };
 		466C331121694665006A057A /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		46B837B62166940F003EC448 /* movieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B837B92166940F003EC448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -313,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				46B8380321678F03003EC448 /* MovieDBService.swift */,
+				464C1338216C2F0B0065BDFC /* MovieDBServiceMocks.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -373,6 +382,9 @@
 			children = (
 				46B837F82166FFF9003EC448 /* TargetType.swift */,
 				46B837FF21678D18003EC448 /* MovieDBTargetType.swift */,
+				464C1332216C2A7F0065BDFC /* TargetType + Alamofire.swift */,
+				464C1334216C2EA90065BDFC /* TVTargetType.swift */,
+				464C1336216C2ED40065BDFC /* MovieTargetType.swift */,
 			);
 			path = "Target Types";
 			sourceTree = "<group>";
@@ -758,8 +770,11 @@
 				464C1322216AD3900065BDFC /* Colors.swift in Sources */,
 				46B837BA2166940F003EC448 /* AppDelegate.swift in Sources */,
 				46B838122167D075003EC448 /* SegmentViewController.swift in Sources */,
+				464C1335216C2EA90065BDFC /* TVTargetType.swift in Sources */,
 				464C1324216AD6A60065BDFC /* ScoreView.swift in Sources */,
 				46B837BC2166940F003EC448 /* MoviesViewController.swift in Sources */,
+				464C1337216C2ED40065BDFC /* MovieTargetType.swift in Sources */,
+				464C1339216C2F0B0065BDFC /* MovieDBServiceMocks.swift in Sources */,
 				46B8382F21693D42003EC448 /* ResultItemCollectionViewCell.swift in Sources */,
 				464C130A216A6CEC0065BDFC /* XibInstantiable.swift in Sources */,
 				464C1314216AAE540065BDFC /* DetailModels.swift in Sources */,
@@ -780,6 +795,7 @@
 				464C1300216A2FD00065BDFC /* ImageUtils.swift in Sources */,
 				46B8380421678F03003EC448 /* MovieDBService.swift in Sources */,
 				46B8380C2167CD78003EC448 /* ResultViewController.swift in Sources */,
+				464C1333216C2A7F0065BDFC /* TargetType + Alamofire.swift in Sources */,
 				464C131A216ACB280065BDFC /* DetailHeaderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

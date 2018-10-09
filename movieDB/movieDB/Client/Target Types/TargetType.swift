@@ -11,6 +11,7 @@ import Foundation
 
 public protocol TargetType {
     
+//    associatedtype ResponseItem: Decodable
     /// The target's base `URL`.
     var baseURL: URL { get }
     
@@ -25,6 +26,8 @@ public protocol TargetType {
     
     // mock file name to serve
     var mockFileName: String? { get }
+    
+    var headers: [String: String]? {get}
 
 }
 

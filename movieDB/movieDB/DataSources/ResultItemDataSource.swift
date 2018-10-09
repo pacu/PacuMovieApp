@@ -39,7 +39,7 @@ public class MovieDbCollectionViewDataSource: PagedResultCollectionViewDataSourc
     
     public var targetType: TargetType
     public var delegate: ResultDataSourceDelegate
-    private var service: MovieDBResultService.Type = MovieDBResultAPIMock.self
+    private var service: MovieDBResultService.Type = MovieDBResultAPI.self
     private var paging = PagingData(totalPages: 0,totalResults: 0,page: 0)
     private var results: [ResultItem]?
     

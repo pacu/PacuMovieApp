@@ -86,3 +86,15 @@ public struct ResultsResponse: Decodable {
     var page: Int?
     var results: [ResultItem]?
 }
+
+public struct APIErrorResponse: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case code = "status_code"
+        case message = "status_message"
+        case success
+    }
+    
+    var code: Int?
+    var message: String?
+    var success: Bool?
+}
