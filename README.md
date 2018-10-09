@@ -50,8 +50,14 @@ V1 of the app uses Mocked APIs to build a basic results page
 - [x] offline support for images (cache)
 - [x] must show a Movie or show detail's
  
+## What's on V1.1.0
+- [x] Use [MovieDB APIv3](https://developers.themoviedb.org/3) for Movies and Tv Shows 
+- [x] must have show 3 categories from movies or TV Shows (popular, top rated, upcoming)
+- [x] offline support for images (cache)
+- [x] must show a Movie or show detail's
+- [x] Connect to real services using Alamofire 
 ## What's pending?
-- [ ] Connect to real services using Alamofire 
+
 - [ ] offline support for models
 - [ ] offline categorized search 
 - [ ] online search
@@ -144,13 +150,16 @@ extension TargetType {
     }
 }
 
-public enum MovieTargetType: TargetType {
-    
-    
+public enum MovieTargetType: TargetType, Detailable {
     
     case popular
     case topRated
     case upcoming
+    case detail(id: Int)
+    
+    public func detailify(id: Int) -> DetailTargetType {
+        return MovieTargetType.detail(id: id)
+    }
     
     public var path: String {
         get {
@@ -161,49 +170,8 @@ public enum MovieTargetType: TargetType {
                 return "/movie/top_rated"
             case .upcoming:
                 return "/movie/upcoming"
-            }
-        }
-    }
-    
-   public var method: String {
-        get {
-            return "GET"
-        }
-    }
-    public var parameters: [String : Any]? {
-        get {
-            return AppEnvironment.shared.defaultParameters()
-        }
-    }
-    
-    public var mockFileName: String? {
-        get {
-            switch self {
-            case .popular:
-                return "popularity_page_1.json"
-            case .topRated:
-                return "top_rated_page_1.json"
-            case .upcoming:
-                return "upcoming_page_1.json"
-            }
-        }
-    }
-    
-}
-
-public enum TVTargetType: TargetType {
-    
-    case popular
-    case topRated
-    
-    public var path: String {
-        get {
-            switch self {
-            case .popular:
-                return "/tv/popular"
-            case .topRated:
-                return "/tv/top_rated"
-            
+            case .detail(let id):
+                return "/movie/\(id)"
             }
         }
     }
@@ -223,9 +191,60 @@ public enum TVTargetType: TargetType {
         get {
             switch self {
             case .popular:
+                return "popularity_page_1.json"
+            case .topRated:
+                return "top_rated_page_1.json"
+            case .upcoming:
+                return "upcoming_page_1.json"
+            case .detail( _):
+                return "venom_detail.json"
+            }
+        }
+    }
+    
+}
+
+public enum TVTargetType: TargetType, Detailable {
+    
+    case popular
+    case topRated
+    case detail(id: Int)
+    
+    public var path: String {
+        get {
+            switch self {
+            case .popular:
+                return "/tv/popular"
+            case .topRated:
+                return "/tv/top_rated"
+            case .detail(let id):
+                return "/tv/\(id)"
+            }
+        }
+    }
+    public func detailify(id: Int) -> DetailTargetType{
+        return TVTargetType.detail(id: id)
+    }
+    public var method: String {
+        get {
+            return "GET"
+        }
+    }
+    public var parameters: [String : Any]? {
+        get {
+            return AppEnvironment.shared.defaultParameters()
+        }
+    }
+    
+    public var mockFileName: String? {
+        get {
+            switch self {
+            case .popular:
                 return "tv_shows_popularity_page_1.json"
             case .topRated:
                 return "tv_shows_top_rated_page_1.json"
+            case .detail( _):
+                return "venom_detail.json"
             }
         }
     }
@@ -251,7 +270,7 @@ service.fetchResult(apiTarget: targetType, page: page) { [weak self](response, e
 ...
 ```
 
-Is up to you whether your services reaches out the web or a cache for contents. In this case, we are using a mocked API. But our View and Controllers do not need to know about it. Don't be rude, don't tell them ;-). This is a basic principle called **separation of concern**.
+Is up to you whether your services reaches out the web or a cache for contents. In this case, we can use a network or a mocked API. But our View and Controllers do not need to know about it. Don't be rude, don't tell them ;-). This is a basic principle called **separation of concern**.
 
 In *MovieDbCollectionViewDataSource
 * I hard coded the mock api and everything works as expected. 
@@ -270,6 +289,115 @@ public class MovieDbCollectionViewDataSource: PagedResultCollectionViewDataSourc
     private var service: MovieDBResultService.Type = MovieDBResultAPIMock.self
 ```
 
+## Network Layer
+Believe it or not, out network layer only a few lines of code
+
+```swift
+class NetworkConnector {
+    
+    static func performRequest<T: Decodable>(responseType: T.Type, target: TargetType, responseBlock: @escaping (_ response: T?, _ error: Error?) ->()) {
+        
+        target.request.validate(statusCode: 200..<300).responseDecodable {
+            (r:DataResponse<T>) in
+            
+            switch r.result {
+            case .success(let value):
+                responseBlock(value, nil)
+                return
+            case .failure(let error):
+                responseBlock(nil, error)
+            }
+            
+        }
+        
+    }
+}
+```
+*How did you pull that one out? the dust must be under some other rag* 
+
+Well... actually no. The service layer it's pretty small as well
+```swift
+public class MovieDBResultAPI: MovieDBResultService {
+    
+    public static func fetchResult(apiTarget: TargetType, page: Int?, resultBlock: @escaping ResultBlock) {
+        NetworkConnector.performRequest(responseType: ResultsResponse.self ,target: apiTarget) { (result, error) in
+            resultBlock(result,error)
+        }
+    }
+    
+    public static func fetchDetail(id: Int?, apiTarget: TargetType, resultBlock: @escaping DetailBlock) {
+        NetworkConnector.performRequest(responseType: ItemDetail.self, target: apiTarget) { (detail, error) in
+            resultBlock(detail,error)
+        }
+    }
+}
+```
+
+First, I moved all Alamofire wrappers and data type helpers to a TargetType *protocol extension* in a separate file.
+
+```swift
+extension TargetType {
+    
+    var request: DataRequest {
+        return Alamofire.request(self.url, method: HTTPMethod.init(rawValue: self.method) ?? .get, parameters: self.af_parameters, encoding: URLEncoding.default, headers: self.af_headers)
+    }
+
+    var af_parameters: Parameters? {
+        return self.parameters
+    }
+    var af_headers: HTTPHeaders? {
+        return self.headers
+    }
+    var url: URL {
+        return self.baseURL.appendingPathComponent(self.path)
+    }
+}
+```
+By doing so, you can actually choose to make this private to your client classes and detach your code from your network layer implementation of choice.
+
+Alamofire Response Mapping and Swift Generics work all the magic for us. I grab this snippet from this [medium.com blog](https://medium.com/@mhacnagbani/alamofire-generic-response-object-serialization-using-codable-13db342347b2) which is a lightweight refactor of what can be found on [the official documentation](https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md#response-mapping)
+```swift
+extension DataRequest {
+    
+    private func decodableResponseSerializer<T: Decodable>() -> DataResponseSerializer<T> {
+        return DataResponseSerializer { _, response, data, error in
+            guard error == nil else { return .failure(error!) }
+            
+            guard let data = data else {
+                return .failure(AFError.responseSerializationFailed(reason: .inputDataNil))
+            }
+            
+            return Result { try JSONDecoder().decode(T.self, from: data) }
+        }
+    }
+    
+    @discardableResult
+    func responseDecodable<T: Decodable>(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<T>) -> Void) -> Self {
+        return response(queue: queue, responseSerializer: decodableResponseSerializer(), completionHandler: completionHandler)
+    }
+}
+```
+
+What it does is to use Decodable protocol as a "Custom response type" to DataResponse<_> 
+
+It seems a little bit of a long shot from the compiler's point of view and we need to tip him off a little by being redundant on the method signature of NetworkConnector like this 
+
+```swift
+class NetworkConnector {
+    
+    static func performRequest<T: Decodable>(responseType: T.Type, target: TargetType, responseBlock: @escaping (_ response: T?, _ error: Error?) ->()) {
+```
+
+If this is the first time you've seen this pattern, it might seem quite an overkill. Trust me on this. I worked on Inheritance based Client APIs and you end up having the same amount of LoCs, but **mutiplied by the amount of responses urls** 🙀
+
+If you are curious and want to know more about it, all the credit corresponds to @Moya [Moya](https://github.com/Moya/Moya)
+
+## putting Network client in action
+Just one line of code in the data source
+```swift
+private var service: MovieDBResultService.Type = MovieDBResultAPI.self
+```
+that's it
 # Results by category 
 One controller to rule them all
 
