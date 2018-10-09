@@ -89,7 +89,7 @@ V1 of the app uses Mocked APIs to build a basic results page
     The good old reusable data sources for our table or collection views. 
 
 # View Architecture: Lightweight MVC with UIViewController containment
-Complaining about MVC is a mistake. A long time ago in a galaxy far far away Apple Biased iOS Developers with clunky sample code which everyone took way too seriously. Old Apple Docs had Massive View Controllers Everywhere. Code Quality was in decay and Apple reacted soon but maybe not enough. Bad implementations of MVC where everywhere and the pattern was going to be the one to blame. Shame on us Developers! 
+Complaining about MVC is a mistake. A long time ago in a galaxy far far away Apple Biased iOS Developers with clunky sample code which everyone took way too seriously. Old Apple Docs had Massive View Controllers Everywhere. Code Quality was in decay and Apple reacted soon but maybe not enough. Bad implementations of MVC were everywhere and the pattern was going to be the one to blame. Shame on us Developers! 
 
 
 Some patterns gained momentum quickly, specially MVVM and VIPER. Personally I had setbacks with MVVM because the lack of widespread adoption of Reactive Cocoa/Swift. Many Developers adopted MVVM without Reactive because the latter can be a debugging madness, but there's no much to gain without it. ViewModes turn into massive mediator objects and code Reusability  affected. VIPER is a nice pattern to adopt on Apps with complex navigation paths, although if that's your situation, you should tune it up a little more before jumping to the VIPER ship.
