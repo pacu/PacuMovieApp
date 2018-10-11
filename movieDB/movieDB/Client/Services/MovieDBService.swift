@@ -13,7 +13,7 @@ public enum ResponseError: Error {
      case invalidResponse
 }
 
-public typealias ResultBlock =  (_ result: ResultsResponse?, _ error: Error?) -> Void
+public typealias ResultBlock =  (_ result: ResultsResponse?, _ error: Error?, _ request: URLRequest?) -> Void
 public typealias DetailBlock =  (_ detail: ItemDetail?, _ error: Error?) -> Void
 
 public protocol MovieDBResultService: class {
@@ -24,13 +24,13 @@ public protocol MovieDBResultService: class {
 public class MovieDBResultAPI: MovieDBResultService {
     
     public static func fetchResult(apiTarget: TargetType, page: Int?, resultBlock: @escaping ResultBlock) {
-        NetworkConnector.performRequest(responseType: ResultsResponse.self ,target: apiTarget) { (result, error) in
-            resultBlock(result,error)
+        NetworkConnector.performRequest(responseType: ResultsResponse.self ,target: apiTarget) { (result, error,request) in
+            resultBlock(result,error, request)
         }
     }
     
     public static func fetchDetail(id: Int?, apiTarget: TargetType, resultBlock: @escaping DetailBlock) {
-        NetworkConnector.performRequest(responseType: ItemDetail.self, target: apiTarget) { (detail, error) in
+        NetworkConnector.performRequest(responseType: ItemDetail.self, target: apiTarget) { (detail, error, request) in
             resultBlock(detail,error)
         }
     }

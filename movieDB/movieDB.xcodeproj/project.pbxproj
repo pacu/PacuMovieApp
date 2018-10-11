@@ -31,6 +31,9 @@
 		464C1335216C2EA90065BDFC /* TVTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1334216C2EA90065BDFC /* TVTargetType.swift */; };
 		464C1337216C2ED40065BDFC /* MovieTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1336216C2ED40065BDFC /* MovieTargetType.swift */; };
 		464C1339216C2F0B0065BDFC /* MovieDBServiceMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1338216C2F0B0065BDFC /* MovieDBServiceMocks.swift */; };
+		464C133C216D2E0C0065BDFC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 464C133A216D2E0C0065BDFC /* Model.xcdatamodeld */; };
+		464C1349216EC1B50065BDFC /* ManagedResultItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1347216EC1B50065BDFC /* ManagedResultItem+CoreDataClass.swift */; };
+		464C134A216EC1B50065BDFC /* ManagedResultItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1348216EC1B50065BDFC /* ManagedResultItem+CoreDataProperties.swift */; };
 		466C331221694665006A057A /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C331121694665006A057A /* DateUtils.swift */; };
 		46B837BA2166940F003EC448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B837B92166940F003EC448 /* AppDelegate.swift */; };
 		46B837BC2166940F003EC448 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B837BB2166940F003EC448 /* MoviesViewController.swift */; };
@@ -113,6 +116,9 @@
 		464C1334216C2EA90065BDFC /* TVTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVTargetType.swift; sourceTree = "<group>"; };
 		464C1336216C2ED40065BDFC /* MovieTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTargetType.swift; sourceTree = "<group>"; };
 		464C1338216C2F0B0065BDFC /* MovieDBServiceMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBServiceMocks.swift; sourceTree = "<group>"; };
+		464C133B216D2E0C0065BDFC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		464C1347216EC1B50065BDFC /* ManagedResultItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ManagedResultItem+CoreDataClass.swift"; path = "/Users/francisco.gindre/Repos/PacuMovieApp/movieDB/movieDB/Persistance/ManagedResultItem+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		464C1348216EC1B50065BDFC /* ManagedResultItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ManagedResultItem+CoreDataProperties.swift"; path = "/Users/francisco.gindre/Repos/PacuMovieApp/movieDB/movieDB/Persistance/ManagedResultItem+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		466C331121694665006A057A /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		46B837B62166940F003EC448 /* movieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B837B92166940F003EC448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +254,15 @@
 			path = "Description Component";
 			sourceTree = "<group>";
 		};
+		464C1344216EC1300065BDFC /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				464C1347216EC1B50065BDFC /* ManagedResultItem+CoreDataClass.swift */,
+				464C1348216EC1B50065BDFC /* ManagedResultItem+CoreDataProperties.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
 		466C330F216942F7006A057A /* DescriptionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +298,7 @@
 		46B837B82166940F003EC448 /* movieDB */ = {
 			isa = PBXGroup;
 			children = (
+				464C1344216EC1300065BDFC /* Persistance */,
 				464C1301216A4D2C0065BDFC /* Navigation */,
 				46B8382921693B20003EC448 /* Views */,
 				46B8381D2167E803003EC448 /* Utils */,
@@ -333,6 +349,7 @@
 				46B837F52166F495003EC448 /* mocks */,
 				46B838082167978C003EC448 /* dontCommitThis.plist */,
 				46B8381A2167E070003EC448 /* Localizable.strings */,
+				464C133A216D2E0C0065BDFC /* Model.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -788,14 +805,17 @@
 				464C132D216B07060065BDFC /* OverviewComponentViewController.swift in Sources */,
 				46B837FE21670502003EC448 /* ResultServiceModels.swift in Sources */,
 				46B8383521694094003EC448 /* ResultItemDescriptionView.swift in Sources */,
+				464C1349216EC1B50065BDFC /* ManagedResultItem+CoreDataClass.swift in Sources */,
 				464C1303216A4F1A0065BDFC /* UIViewController+containment.swift in Sources */,
 				46B83827216919F4003EC448 /* ResultItemDataSource.swift in Sources */,
 				46B838232167EE6F003EC448 /* ResultTabViewController.swift in Sources */,
 				464C130C216A83F00065BDFC /* CALayer+shadowing.swift in Sources */,
 				464C1300216A2FD00065BDFC /* ImageUtils.swift in Sources */,
+				464C133C216D2E0C0065BDFC /* Model.xcdatamodeld in Sources */,
 				46B8380421678F03003EC448 /* MovieDBService.swift in Sources */,
 				46B8380C2167CD78003EC448 /* ResultViewController.swift in Sources */,
 				464C1333216C2A7F0065BDFC /* TargetType + Alamofire.swift in Sources */,
+				464C134A216EC1B50065BDFC /* ManagedResultItem+CoreDataProperties.swift in Sources */,
 				464C131A216ACB280065BDFC /* DetailHeaderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1137,6 +1157,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		464C133A216D2E0C0065BDFC /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				464C133B216D2E0C0065BDFC /* Model.xcdatamodel */,
+			);
+			currentVersion = 464C133B216D2E0C0065BDFC /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 46B837AE2166940F003EC448 /* Project object */;
 }

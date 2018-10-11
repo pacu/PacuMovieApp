@@ -12,17 +12,17 @@ import Alamofire
 
 class NetworkConnector {
     
-    static func performRequest<T: Decodable>(responseType: T.Type, target: TargetType, responseBlock: @escaping (_ response: T?, _ error: Error?) ->()) {
+    static func performRequest<T: Decodable>(responseType: T.Type, target: TargetType, responseBlock: @escaping (_ response: T?, _ error: Error?, _ Request: URLRequest?) ->()) {
         
         target.request.validate(statusCode: 200..<300).responseDecodable {
             (r:DataResponse<T>) in
             
             switch r.result {
             case .success(let value):
-                responseBlock(value, nil)
+                responseBlock(value, nil,r.request)
                 return
             case .failure(let error):
-                responseBlock(nil, error)
+                responseBlock(nil, error,r.request)
             }
             
         }
