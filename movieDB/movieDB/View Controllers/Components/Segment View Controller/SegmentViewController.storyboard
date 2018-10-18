@@ -28,7 +28,8 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.19606098532676697" green="0.19608858227729797" blue="0.19604828953742981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0079626300290000004" green="0.89673913039999997" blue="0.14779758060000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="SPX-al-2tc" firstAttribute="centerY" secondItem="R2U-Uu-D6r" secondAttribute="centerY" id="Bzi-V8-Zon"/>
                             <constraint firstItem="SPX-al-2tc" firstAttribute="centerX" secondItem="R2U-Uu-D6r" secondAttribute="centerX" id="Cec-0P-qIp"/>

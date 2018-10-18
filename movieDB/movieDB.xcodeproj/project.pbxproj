@@ -197,13 +197,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		464C1301216A4D2C0065BDFC /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
 		464C1304216A55110065BDFC /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,7 +276,6 @@
 		46B837B82166940F003EC448 /* movieDB */ = {
 			isa = PBXGroup;
 			children = (
-				464C1301216A4D2C0065BDFC /* Navigation */,
 				46B8382921693B20003EC448 /* Views */,
 				46B8381D2167E803003EC448 /* Utils */,
 				46B8380A2167CD3F003EC448 /* View Controllers */,
