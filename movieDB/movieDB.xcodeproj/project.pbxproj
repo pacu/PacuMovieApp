@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D20D7D922B2B6A9000BD3AE /* dontCommitThis.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D20D7D822B2B6A9000BD3AE /* dontCommitThis.plist */; };
 		464C1300216A2FD00065BDFC /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C12FF216A2FD00065BDFC /* ImageUtils.swift */; };
 		464C1303216A4F1A0065BDFC /* UIViewController+containment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1302216A4F1A0065BDFC /* UIViewController+containment.swift */; };
 		464C1306216A55370065BDFC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1305216A55370065BDFC /* DetailViewController.swift */; };
@@ -48,7 +49,6 @@
 		46B8380021678D18003EC448 /* MovieDBTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B837FF21678D18003EC448 /* MovieDBTargetType.swift */; };
 		46B8380421678F03003EC448 /* MovieDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B8380321678F03003EC448 /* MovieDBService.swift */; };
 		46B8380721679652003EC448 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B8380621679652003EC448 /* AppEnvironment.swift */; };
-		46B838092167978C003EC448 /* dontCommitThis.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46B838082167978C003EC448 /* dontCommitThis.plist */; };
 		46B8380C2167CD78003EC448 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B8380B2167CD78003EC448 /* ResultViewController.swift */; };
 		46B8380F2167CDCA003EC448 /* ResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B8380E2167CDCA003EC448 /* ResultViewController.storyboard */; };
 		46B838122167D075003EC448 /* SegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B838112167D075003EC448 /* SegmentViewController.swift */; };
@@ -86,6 +86,7 @@
 
 /* Begin PBXFileReference section */
 		0975FD11D7417822A393FEDC /* Pods_movieDBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieDBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D20D7D822B2B6A9000BD3AE /* dontCommitThis.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = dontCommitThis.plist; sourceTree = "<group>"; };
 		2585D68842A21914CFB82DCC /* Pods_movieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9C9258234B8D51F5DCFC33 /* Pods-movieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-movieDB/Pods-movieDB.release.xcconfig"; sourceTree = "<group>"; };
 		33632AC2C9873D8B6B3BFD85 /* Pods-movieDBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieDBUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movieDBUITests/Pods-movieDBUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,7 +137,6 @@
 		46B837FF21678D18003EC448 /* MovieDBTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBTargetType.swift; sourceTree = "<group>"; };
 		46B8380321678F03003EC448 /* MovieDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBService.swift; sourceTree = "<group>"; };
 		46B8380621679652003EC448 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
-		46B838082167978C003EC448 /* dontCommitThis.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = dontCommitThis.plist; sourceTree = "<group>"; };
 		46B8380B2167CD78003EC448 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		46B8380E2167CDCA003EC448 /* ResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultViewController.storyboard; sourceTree = "<group>"; };
 		46B838112167D075003EC448 /* SegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentViewController.swift; sourceTree = "<group>"; };
@@ -323,8 +323,8 @@
 			children = (
 				46B8380D2167CDA2003EC448 /* View Controllers */,
 				46B837F52166F495003EC448 /* mocks */,
-				46B838082167978C003EC448 /* dontCommitThis.plist */,
 				46B8381A2167E070003EC448 /* Localizable.strings */,
+				0D20D7D822B2B6A9000BD3AE /* dontCommitThis.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -619,6 +619,7 @@
 				46B838152167D0C1003EC448 /* SegmentViewController.storyboard in Resources */,
 				46B83837216940A0003EC448 /* ResultItemDescriptionView.xib in Resources */,
 				46B837C621669411003EC448 /* LaunchScreen.storyboard in Resources */,
+				0D20D7D922B2B6A9000BD3AE /* dontCommitThis.plist in Resources */,
 				464C131D216AD2010065BDFC /* DetailScoreComponent.storyboard in Resources */,
 				46B837C321669411003EC448 /* Assets.xcassets in Resources */,
 				464C130E216A884F0065BDFC /* venom_detail.json in Resources */,
@@ -626,7 +627,6 @@
 				46B8383021693D42003EC448 /* ResultItemCollectionViewCell.xib in Resources */,
 				464C1318216AC7BA0065BDFC /* DetailHeaderViewController.storyboard in Resources */,
 				464C1310216A892E0065BDFC /* tv_shows_popularity_page_1.json in Resources */,
-				46B838092167978C003EC448 /* dontCommitThis.plist in Resources */,
 				46B837F42166F489003EC448 /* top_rated_page_1.json in Resources */,
 				464C1329216AEF110065BDFC /* OverviewComponentViewController.storyboard in Resources */,
 				46B838182167E070003EC448 /* Localizable.strings in Resources */,
@@ -727,28 +727,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-movieDB/Pods-movieDB-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BouncyLayout/BouncyLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/GaugeKit/GaugeKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-movieDB/Pods-movieDB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BouncyLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GaugeKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-movieDB/Pods-movieDB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-movieDB/Pods-movieDB-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-movieDB/Pods-movieDB-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
