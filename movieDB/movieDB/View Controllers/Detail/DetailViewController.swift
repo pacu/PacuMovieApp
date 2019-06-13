@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
     private var headerController: DetailHeaderViewController?
     private var scoreController: DetailScoreComponent?
     private var overviewController: OverviewComponentViewController?
-    private var service: MovieDBResultService.Type = MovieDBResultAPIMock.self
+    private var service: MovieDBResultService.Type = MovieDBResultAPI.self
     var targetType: TargetType?
     var id: Int? {
         didSet {
