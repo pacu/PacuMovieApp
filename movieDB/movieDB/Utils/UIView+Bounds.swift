@@ -11,31 +11,30 @@ import UIKit
 
 public extension UIView {
     
-    /// Este método alinea la view a la super view tanto de manera horizontal como vertical. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func bindFrameToSuperviewBounds() {
+    
+    func bindFrameToSuperviewBounds() {
         
         bindFrameHorizontalToSuperviewBounds()
         bindFrameVerticalToSuperviewBounds()
         
     }
-    
-    /// Este método alinea la view a la super view horizontalmente. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func bindFrameHorizontalToSuperviewBounds() {
+
+    func bindFrameHorizontalToSuperviewBounds() {
         bindFrameHorizontalToSuperviewBounds(0, right: 0)
     }
     
-    /// Este método alinea la view a la super view horizontalmente dejando de margen a derecha el valor que se le parametriza. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func bindFrameHorizontalToSuperviewBounds(_ right:CGFloat) {
+    
+    func bindFrameHorizontalToSuperviewBounds(_ right:CGFloat) {
         bindFrameHorizontalToSuperviewBounds(0, right: right)
     }
     
-    /// Este método alinea la view a la super view horizontalmente dejando de margen a izquierda el valor que se le parametriza. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func bindFrameHorizontalToSuperviewBounds(left:CGFloat) {
+    
+    func bindFrameHorizontalToSuperviewBounds(left:CGFloat) {
         bindFrameHorizontalToSuperviewBounds(left, right: 0)
     }
     
-    /// Este método alinea la view a la super view tanto horizontalmente dejando de margen a derecha e izquierda con los valor que se le parametriza. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func bindFrameHorizontalToSuperviewBounds(_ left:CGFloat, right:CGFloat) {
+    
+    func bindFrameHorizontalToSuperviewBounds(_ left:CGFloat, right:CGFloat) {
         guard superview != nil else { return }
         
         translatesAutoresizingMaskIntoConstraints = false
@@ -46,22 +45,22 @@ public extension UIView {
     }
     
     /// Este método alinea la view a la super view verticalmente. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func bindFrameVerticalToSuperviewBounds() {
+     func bindFrameVerticalToSuperviewBounds() {
         bindFrameVerticalToSuperviewBounds(0, down: 0)
     }
     
     /// Este método alinea la view a la super view verticalmente dejando de margen hacia abajo el valor que se le parametriza. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func bindFrameVerticalToSuperviewBounds(_ down:CGFloat) {
+     func bindFrameVerticalToSuperviewBounds(_ down:CGFloat) {
         bindFrameVerticalToSuperviewBounds(0, down: down)
     }
     
     /// Este método alinea la view a la super view verticalmente dejando de margen hacia arriba el valor que se le parametriza. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func bindFrameVerticalToSuperviewBounds(up:CGFloat) {
+     func bindFrameVerticalToSuperviewBounds(up:CGFloat) {
         bindFrameVerticalToSuperviewBounds(up, down: 0)
     }
     
     /// Este método alinea la view a la super view verticalmente dejando de margen hacia arriba y abajo los valor que se le parametrizan. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func bindFrameVerticalToSuperviewBounds(_ up:CGFloat, down:CGFloat) {
+     func bindFrameVerticalToSuperviewBounds(_ up:CGFloat, down:CGFloat) {
         guard superview != nil else { return }
         
         translatesAutoresizingMaskIntoConstraints = false
@@ -71,7 +70,7 @@ public extension UIView {
     }
     
     /// Este método centra la view en funcion de la super view verticalmente. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func centerVerticalToSuperviewBounds() {
+     func centerVerticalToSuperviewBounds() {
         
         guard let superview = self.superview else { return }
         
@@ -87,7 +86,7 @@ public extension UIView {
     }
     
     /// Este método centra la view en funcion de la super view horizontalmente. Tener en cuenta que este metodo no limpia las contraints de la view
-    public func centerHorizontalToSuperviewBounds() {
+     func centerHorizontalToSuperviewBounds() {
         
         guard let superview = self.superview else { return }
         
@@ -102,7 +101,7 @@ public extension UIView {
         
     }
     
-    public func bindFrameToSuperviewTopMargin() {
+     func bindFrameToSuperviewTopMargin() {
         guard let superview = self.superview else { return }
         
         translatesAutoresizingMaskIntoConstraints = false
@@ -116,7 +115,7 @@ public extension UIView {
         
     }
     
-    public func bindFrameToSuperviewBottomMargin(){
+     func bindFrameToSuperviewBottomMargin(){
         guard let superview = self.superview else { return }
         
         translatesAutoresizingMaskIntoConstraints = false
@@ -130,7 +129,7 @@ public extension UIView {
         
     }
     
-    public func constrainTo(height: CGFloat){
+     func constrainTo(height: CGFloat){
         NSLayoutConstraint(item: self,
                            attribute: .height,
                            relatedBy: .equal,
@@ -140,7 +139,7 @@ public extension UIView {
                            constant: height).isActive = true
     }
     
-    public func constrainTo(width: CGFloat){
+     func constrainTo(width: CGFloat){
         NSLayoutConstraint(item: self,
                            attribute: .width,
                            relatedBy: .equal,
