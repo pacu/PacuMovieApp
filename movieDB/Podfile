@@ -8,7 +8,7 @@ target 'movieDB' do
   # Pods for movieDB
   pod 'Alamofire'
   pod 'SDWebImage'
-  pod 'BouncyLayout'
+  pod 'BouncyLayout', :git => 'https://github.com/pacu/BouncyLayout.git', :branch => 'swift5'
   pod 'GaugeKit', :git => 'https://github.com/pacu/GaugeKit', :branch => 'feature/Xcode10'
   pod 'SVProgressHUD'
   target 'movieDBTests' do

@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
-  - BouncyLayout (2.1.0)
+  - BouncyLayout (2.2.0)
   - GaugeKit (0.4.5)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
@@ -9,7 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - BouncyLayout
+  - BouncyLayout (from `https://github.com/pacu/BouncyLayout.git`, branch `swift5`)
   - GaugeKit (from `https://github.com/pacu/GaugeKit`, branch `feature/Xcode10`)
   - SDWebImage
   - SVProgressHUD
@@ -17,27 +17,32 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - BouncyLayout
     - SDWebImage
     - SVProgressHUD
 
 EXTERNAL SOURCES:
+  BouncyLayout:
+    :branch: swift5
+    :git: https://github.com/pacu/BouncyLayout.git
   GaugeKit:
     :branch: feature/Xcode10
     :git: https://github.com/pacu/GaugeKit
 
 CHECKOUT OPTIONS:
+  BouncyLayout:
+    :commit: f220791af1afd1486fb154a27159aee457e7a694
+    :git: https://github.com/pacu/BouncyLayout.git
   GaugeKit:
     :commit: 901eb013df867de45b8c592492f58e4433b730a1
     :git: https://github.com/pacu/GaugeKit
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  BouncyLayout: a7955879861375cc4e88bb64d42bcf622cd2694c
+  BouncyLayout: b8be605d6c729086d0fc83f180f71e804abeaf04
   GaugeKit: 63e34e3dbcf49f74f4052d02cbaf5a8657598d3f
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 02ca66a69e4b33f8891267380b455ab3edbdf834
+PODFILE CHECKSUM: 1baa189d2e422f9254c3720625e9c0e2fa892f02
 
 COCOAPODS: 1.7.2
