@@ -69,3 +69,7 @@ fastlane/test_output
 
 dontCommitThis.plist
 movieDB/Pods/Local\ Podspecs
+
+
+#### Flutter
+dont_commit_this.yml
