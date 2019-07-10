@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:movie_app_flutter/API/client.dart';
 import 'package:movie_app_flutter/API/response.dart';
 import 'package:movie_app_flutter/Builder/movie_list_builder.dart';
-import 'package:movie_app_flutter/Widgets/DescriptionCard.dart';
 
 void main() => runApp(MyApp());
 
@@ -50,7 +49,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   
 
-  _MyHomePageState() {}
+  _MyHomePageState();
 
   @override
   Widget build(BuildContext context) {

@@ -15,7 +15,8 @@ Item _$ItemFromJson(Map<String, dynamic> json) {
       json['poster_path'] as String,
       json['overview'] as String,
       json['release_date'] as String,
-      json['first_air_date'] as String);
+      json['first_air_date'] as String,
+      json['backdrop_path'] as String);
 }
 
 Map<String, dynamic> _$ItemToJson(Item instance) => <String, dynamic>{
@@ -26,5 +27,6 @@ Map<String, dynamic> _$ItemToJson(Item instance) => <String, dynamic>{
       'poster_path': instance.posterPath,
       'overview': instance.overview,
       'release_date': instance.releaseDate,
-      'first_air_date': instance.firstAirDate
+      'first_air_date': instance.firstAirDate,
+      'backdrop_path': instance.backdropPath
     };

@@ -18,6 +18,8 @@ class Item {
   String releaseDate;
   @JsonKey(name: 'first_air_date')
   String firstAirDate;
+  @JsonKey(name: 'backdrop_path')
+  String backdropPath;
 
   Item(this.voteCount, 
             this.id, 
@@ -26,7 +28,8 @@ class Item {
             this.posterPath,
             this.overview,
             this.releaseDate,
-            this.firstAirDate);
+            this.firstAirDate,
+            this.backdropPath);
   
   factory Item.fromJson(Map<String, dynamic> json) => _$ItemFromJson(json);
   Map<String, dynamic> toJson() => _$ItemToJson(this);
