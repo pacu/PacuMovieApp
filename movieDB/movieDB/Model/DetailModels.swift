@@ -45,6 +45,7 @@ public enum ItemStatus: String, Decodable {
     case postProduction = "Post Production"
     case released = "Released"
     case cancelled = "Cancelled"
+    case ended = "Ended"
 }
 
 public struct CreditItem: Decodable {
@@ -59,7 +60,7 @@ public struct CreditItem: Decodable {
     var id: Int?
     var creditId: String
     var name: String?
-    var gender: String?
+    var gender: Int?
     var profilePath: String?
 }
 
