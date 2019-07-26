@@ -7,9 +7,10 @@
 //
 
 import Foundation
-
+import UIKit
 enum EnvironmentError: Error {
     case unavaliableConfigFile
+    case apikeyMissing
 }
 
 /**
@@ -19,7 +20,6 @@ enum EnvironmentError: Error {
  */
 class AppEnvironment {
     
-    
     private struct Constants {
         static let configFileName = "dontCommitThis"
         static let imageEndpoint = "https://image.tmdb.org/t/p/"
@@ -27,10 +27,11 @@ class AppEnvironment {
     
     public private(set) var apikey: String = ""
     
-    
     public var language: String {
         return NSLocale.current.identifier
     }
+    
+    public var launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     
     // TODO: obtain real url from https://developers.themoviedb.org/3/configuration/get-api-configuration
     public var imageEndpoint:String {
@@ -41,26 +42,28 @@ class AppEnvironment {
         return NSLocale.current
     }
     
-    public static let shared =  AppEnvironment()
+    // Fail if no app environment
+    public static let shared =  try! AppEnvironment()
     
-    private init() {
-        
-        if let path = Bundle.main.path(forResource: Constants.configFileName, ofType: "plist"),
-            let myDict = NSDictionary(contentsOfFile: path), let key = myDict["apikey"] as? String  {
-            self.apikey = key
+    fileprivate static func getApikey() throws -> String  {
+        guard let path = Bundle.main.path(forResource: Constants.configFileName, ofType: "plist") else {
+            throw EnvironmentError.unavaliableConfigFile
         }
-        
+        guard let myDict = NSDictionary(contentsOfFile: path) else {
+            throw EnvironmentError.unavaliableConfigFile
+        }
+
+        guard let apikey = myDict["apikey"] as? String else {
+            throw EnvironmentError.apikeyMissing
+        }
+        return apikey
     }
     
-    //Todo: remove repeated code
-    @discardableResult static func isEnvironmentAvailable() throws -> Bool {
-        guard let path = Bundle.main.path(forResource: Constants.configFileName, ofType: "plist"),
-            let myDict = NSDictionary(contentsOfFile: path),  let _ = myDict["apikey"] as? String  else {
-                throw EnvironmentError.unavaliableConfigFile
-        }
-        
-        return true
+    private init() throws {
+        self.apikey = try AppEnvironment.getApikey()
     }
-        
     
+    func isEnvironmentAvailable() -> Bool {
+       return apikey != ""
+    }
 }
