@@ -30,7 +30,7 @@ class AppEnvironment {
     public var language: String {
         return NSLocale.current.identifier
     }
-    
+    public var launchArguments: [String]?
     public var launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     
     // TODO: obtain real url from https://developers.themoviedb.org/3/configuration/get-api-configuration
@@ -40,6 +40,14 @@ class AppEnvironment {
     
     public var locale: Locale {
         return NSLocale.current
+    }
+    
+    public var isEnvironmentAvailable: Bool {
+        return apikey != ""
+    }
+    
+    public var useMocks: Bool {
+        return (launchArguments?.firstIndex(of: "useMocks")) != nil
     }
     
     // Fail if no app environment
@@ -61,9 +69,5 @@ class AppEnvironment {
     
     private init() throws {
         self.apikey = try AppEnvironment.getApikey()
-    }
-    
-    func isEnvironmentAvailable() -> Bool {
-       return apikey != ""
     }
 }

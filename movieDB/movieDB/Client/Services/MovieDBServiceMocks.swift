@@ -18,7 +18,7 @@ public class MovieDBResultAPIMock: MovieDBResultService {
     
     public static func fetchResult(apiTarget: TargetType, page: Int?, resultBlock: @escaping ResultBlock) -> Void {
         
-        guard let name = apiTarget.mockFileName  else {
+        guard let target = apiTarget as? Mockable, let name = target.mockFileName  else {
             DispatchQueue.main.asyncAfter(deadline: .now() + Constants.waitTime) {
                 resultBlock(nil, ResponseError.invalidResponse)
             }
@@ -57,7 +57,7 @@ public class MovieDBResultAPIMock: MovieDBResultService {
     
     
     public static func fetchDetail(id: Int?, apiTarget: TargetType, resultBlock: @escaping DetailBlock) -> Void {
-        guard let name = apiTarget.mockFileName  else {
+        guard let target = apiTarget as? Mockable, let name = target.mockFileName  else {
             DispatchQueue.main.asyncAfter(deadline: .now() + Constants.waitTime) {
                 resultBlock(nil, ResponseError.invalidResponse)
             }

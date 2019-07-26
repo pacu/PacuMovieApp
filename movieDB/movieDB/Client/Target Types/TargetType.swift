@@ -24,11 +24,14 @@ public protocol TargetType {
     /// The parameters to be encoded in the request.
     var parameters: [String: Any]? { get }
     
+    var headers: [String: String]? {get}
+
+}
+
+public protocol Mockable {
     // mock file name to serve
     var mockFileName: String? { get }
     
-    var headers: [String: String]? {get}
-
 }
 
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum TVTargetType: TargetType, Detailable {
+public enum TVTargetType: TargetType, Detailable, Mockable {
     
     case popular
     case topRated
@@ -47,7 +47,7 @@ public enum TVTargetType: TargetType, Detailable {
                 return "tv_shows_popularity_page_1.json"
             case .topRated:
                 return "tv_shows_top_rated_page_1.json"
-            case .detail( _):
+            case .detail(_):
                 return "venom_detail.json"
             }
         }

@@ -18,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         UITabBar.appearance().tintColor = #colorLiteral(red: 0, green: 0.8991678357, blue: 0.1901264787, alpha: 1)
+        
         let environment = AppEnvironment.shared
+        environment.launchArguments = CommandLine.arguments
         environment.launchOptions = launchOptions
-        return environment.isEnvironmentAvailable()
+        return environment.isEnvironmentAvailable
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
