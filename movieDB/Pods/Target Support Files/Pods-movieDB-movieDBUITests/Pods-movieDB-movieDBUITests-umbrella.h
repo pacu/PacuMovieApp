@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_movieDBUITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_movieDBUITestsVersionString[];
+FOUNDATION_EXPORT double Pods_movieDB_movieDBUITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_movieDB_movieDBUITestsVersionString[];
 

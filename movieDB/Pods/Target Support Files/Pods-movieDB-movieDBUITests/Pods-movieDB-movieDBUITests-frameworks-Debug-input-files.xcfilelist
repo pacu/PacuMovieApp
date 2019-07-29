@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-movieDB-movieDBUITests/Pods-movieDB-movieDBUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/BouncyLayout/BouncyLayout.framework
+${BUILT_PRODUCTS_DIR}/GaugeKit/GaugeKit.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
