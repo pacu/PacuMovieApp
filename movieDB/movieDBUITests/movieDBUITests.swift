@@ -36,24 +36,21 @@ class MovieDBUITests: XCTestCase {
         
         let movieTab = app.buttons["Movies"]
         let showsTab = app.buttons["Shows"]
-        let topRatedSegment = app.buttons["Top Rated"]
-        let upcomingSegment = app.buttons["Upcoming"]
-        let popularSegment = app.buttons["Popular"]
-        
+       
         
         // all controls are hittable
         XCTAssertTrue(movieTab.isHittable)
         XCTAssertTrue(showsTab.isHittable)
-        XCTAssertTrue(topRatedSegment.isHittable)
-        XCTAssertTrue(upcomingSegment.isHittable)
-        XCTAssertTrue(popularSegment.isHittable)
+      
+        // validate Movie Tab
+        
+        MovieTabValidator.validateSegments(app: app)
         
         // on launch first tab should be selected and popular
         // should be the segment selected
         
-        XCTAssert(popularSegment.isSelected)
         XCTAssert(movieTab.isSelected)
-        
+        MovieTabValidator.validatePopularSegment(isSelected: true, on: app)
     }
 
 }

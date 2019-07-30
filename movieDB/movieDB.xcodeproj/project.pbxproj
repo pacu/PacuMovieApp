@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D20D7D922B2B6A9000BD3AE /* dontCommitThis.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D20D7D822B2B6A9000BD3AE /* dontCommitThis.plist */; };
+		0DCD205722EFBF0800C8DE62 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD205622EFBF0800C8DE62 /* MainScreenController.swift */; };
+		0DCD205A22EFC0FC00C8DE62 /* MovieTabValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD205922EFC0FC00C8DE62 /* MovieTabValidator.swift */; };
 		464C1300216A2FD00065BDFC /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C12FF216A2FD00065BDFC /* ImageUtils.swift */; };
 		464C1303216A4F1A0065BDFC /* UIViewController+containment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1302216A4F1A0065BDFC /* UIViewController+containment.swift */; };
 		464C1306216A55370065BDFC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C1305216A55370065BDFC /* DetailViewController.swift */; };
@@ -86,6 +88,8 @@
 
 /* Begin PBXFileReference section */
 		0D20D7D822B2B6A9000BD3AE /* dontCommitThis.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = dontCommitThis.plist; sourceTree = "<group>"; };
+		0DCD205622EFBF0800C8DE62 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
+		0DCD205922EFC0FC00C8DE62 /* MovieTabValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabValidator.swift; sourceTree = "<group>"; };
 		2585D68842A21914CFB82DCC /* Pods_movieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9C9258234B8D51F5DCFC33 /* Pods-movieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-movieDB/Pods-movieDB.release.xcconfig"; sourceTree = "<group>"; };
 		33632AC2C9873D8B6B3BFD85 /* Pods-movieDBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieDBUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movieDBUITests/Pods-movieDBUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +193,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DCD205522EFBECE00C8DE62 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0DCD205622EFBF0800C8DE62 /* MainScreenController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0DCD205822EFC0EA00C8DE62 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				0DCD205922EFC0FC00C8DE62 /* MovieTabValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		2FA688EC49CF51ED5A969ED3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +325,8 @@
 		46B837DA21669411003EC448 /* movieDBUITests */ = {
 			isa = PBXGroup;
 			children = (
+				0DCD205822EFC0EA00C8DE62 /* Validators */,
+				0DCD205522EFBECE00C8DE62 /* Controller */,
 				46B837DB21669411003EC448 /* movieDBUITests.swift */,
 				46B837DD21669411003EC448 /* Info.plist */,
 			);
@@ -816,6 +838,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCD205A22EFC0FC00C8DE62 /* MovieTabValidator.swift in Sources */,
+				0DCD205722EFBF0800C8DE62 /* MainScreenController.swift in Sources */,
 				46B837DC21669411003EC448 /* movieDBUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
