@@ -8,8 +8,8 @@
 
 import Foundation
 
-public enum MovieTargetType: TargetType, Detailable {
-    
+public enum MovieTargetType: TargetType, Detailable, Mockable {
+        
     case popular
     case topRated
     case upcoming

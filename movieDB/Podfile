@@ -17,8 +17,7 @@ target 'movieDB' do
   end
 
   target 'movieDBUITests' do
-    inherit! :search_paths
-    # Pods for testing
+    use_frameworks!
   end
 
 end

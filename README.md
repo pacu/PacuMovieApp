@@ -443,3 +443,84 @@ Avoid "god objects" at all costs. Balance every class to 'mind its own business'
 * Contains no duplication;
 * Expresses all the design ideas that are in the system;
 * Minimizes the number of entities such as classes, methods, functions, and the like.
+
+# UI Testing 
+
+User Interface testing follows a Controller - Validator pattern
+
+Controllers have the responsibility of accessing and navigating through the app.
+
+Common behavior is made available through protocols for the different controllers to adopt as needed
+
+``` swift 
+protocol AppController {
+    var app: XCUIApplication { get }
+}
+
+protocol MainScreenController: AppController {
+    
+    func tapMoviesTab()
+    func tapShowsTab()
+    
+}
+
+extension MainScreenController {
+    
+    func tapMoviesTab() {
+        app.buttons["Movies"].tap()
+    }
+    
+    func tapShowsTab() {
+        app.buttons["Shows"].tap()
+    }
+    
+}
+
+```
+
+**Validators** are the ones in charge of testing each screen consistency.
+
+``` swift 
+struct MovieTabValidator {
+    
+    static func validateSegments(app: XCUIApplication) {
+        let topRatedSegment = app.buttons["Top Rated"]
+        let upcomingSegment = app.buttons["Upcoming"]
+        let popularSegment = app.buttons["Popular"]
+        
+        XCTAssertTrue(topRatedSegment.isHittable)
+        XCTAssertTrue(upcomingSegment.isHittable)
+        XCTAssertTrue(popularSegment.isHittable)
+    }
+    
+    static func validatePopularSegment(isSelected: Bool, on app: XCUIApplication){
+        
+        let popularSegment = app.buttons["Popular"]
+        XCTAssert(popularSegment.isSelected == isSelected)
+    }
+}
+```
+
+Consequently, UI Test are composed simply by articulating **controllers** to emulate application usage and **validators** to make the corresponding assertions
+
+``` swift 
+ func testMainControls() {      
+        let movieTab = app.buttons["Movies"]
+        let showsTab = app.buttons["Shows"]
+       
+        
+        // all controls are hittable
+        XCTAssertTrue(movieTab.isHittable)
+        XCTAssertTrue(showsTab.isHittable)
+      
+        // validate Movie Tab
+        
+        MovieTabValidator.validateSegments(app: app)
+        
+        // on launch first tab should be selected and popular
+        // should be the segment selected
+        
+        XCTAssert(movieTab.isSelected)
+        MovieTabValidator.validatePopularSegment(isSelected: true, on: app)
+    }
+```
